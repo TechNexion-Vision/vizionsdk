@@ -13,6 +13,13 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 - TEVS-AR0821
 - TEVS-AR0822
 - TEVS-AR1335
+- TEVI-AR0144 (EOL)
+- TEVI-AR0234 (EOL)
+- TEVI-AR0521 (EOL)
+- TEVI-AR0522 (EOL)
+- TEVI-AR0821 (EOL)
+- TEVI-AR0822 (EOL)
+- TEVI-AR1335 (EOL)
 
 ### FPD-LinkIII Cameras
 
