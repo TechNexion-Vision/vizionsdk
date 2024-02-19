@@ -1,7 +1,10 @@
-# VizionViewer™
+# VizionSDK
+VizionSDK is a software development kit designed for Windows and Linux paltfrom. It mainly supports Technexion TEVI-AR series cameras on various types of platform, including Windows10/11, Ubuntu, Yocto, NXP-imx8mp, and so on. It provides the methods to easily control AR Series Cameras for companies and individuals who are looking to develop custom applications.
 
-VizionViewer™ is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
-
+## What is included in the repository
+- library : VizionSDK core library files and C/C++ header files.
+- examples : C/C++ samples project source code.
+- doc : API reference documentation and sample documentation.
 ## Supported TechNexion Cameras
 
 ### MIPI Cameras
@@ -40,6 +43,11 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 - VCI-AR0821
 - VCI-AR0822
 - VCI-AR1335
+
+
+# VizionViewer™
+
+VizionViewer™ is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
 
 ## How to Install VizionViewer™
 
@@ -81,6 +89,13 @@ Then update the package cache and install the package using:
 sudo apt update
 sudo apt install vizionsdk vizionviewer
 ```
+
+## Documents
+- Github Pages：https://github.com/TechNexion
+- Overview Document：https://developer.technexion.com/docs/product-category-overview
+
+## Related links
+- [Technexion Main Page](https://www.technexion.com/)
 
 ## More Information about VizionViewer
 
