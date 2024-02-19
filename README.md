@@ -8,7 +8,6 @@ VizionSDK is a software development kit designed for Windows and Linux paltfrom.
 ## Supported TechNexion Cameras
 
 ### MIPI Cameras
-
 - TEVS-AR0144
 - TEVS-AR0234
 - TEVS-AR0521
@@ -93,6 +92,7 @@ sudo apt install vizionsdk vizionviewer
 ## Documents
 - Github Pages：https://github.com/TechNexion
 - Overview Document：https://developer.technexion.com/docs/product-category-overview
+- API User Guide: https://developer.technexion.com/docs/vizionsdk-overview
 
 ## Related links
 - [Technexion Main Page](https://www.technexion.com/)
