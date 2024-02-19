@@ -44,21 +44,21 @@ VizionSDK is a software development kit designed for Windows and Linux paltfrom.
 - VCI-AR1335
 
 
-# VizionViewer™
+## VizionViewer
 
-VizionViewer™ is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
+VizionViewer is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
 
-## How to Install VizionViewer™
+### How to Install VizionViewer
 
-### Windows
+#### Windows
 
-1. Download the [VizionViewer™ installer](https://download.technexion.com/vizionviewer/windows_x64/) for Windows.
+1. Download the [VizionViewer installer](https://download.technexion.com/vizionviewer/windows_x64/) for Windows.
 2. Once it is downloaded, run the installer (vizionviewersetup_{version}.exe).
 3. By default, VizionViewer™ is installed under C:\Program Files\VizionViewer.
 
-### Linux
+#### Linux
 
-#### Offline Installation
+##### Offline Installation
 
 1. Download the [.deb packages](https://download.technexion.com/vizionviewer/linux_x64/) for Ubuntu.
 2. Uncompress and install .deb packages, You can do this either through the graphical software center if available or via the command line using:
@@ -71,7 +71,7 @@ sudo apt install ./vizionviewer.deb
 
 3. Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager.
 
-##### Online Installation
+###### Online Installation
 
 The repository and key can also be installed manually with the following script:
 
