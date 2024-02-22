@@ -46,7 +46,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 
 ## VizionViewer™
 
-VizionViewer™ is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
+[VizionViewer™](https://developer.technexion.com/docs/usage-guide) is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
 
 ![output](./doc/resources/VizionViewer.png)
 
@@ -59,7 +59,6 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 #### Embedded Platforms
 - [NXP-iMX8MP, NXP-iMX8MM](https://developer.technexion.com/docs/installation#nxpimx8mp-nxpimx8mm)
 - [NVIDIA-Jetpack5](https://developer.technexion.com/docs/installation#nvidiajetpack-5x)
-
 
 ## Documents
 - Github Pages：https://github.com/TechNexion
