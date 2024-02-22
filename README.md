@@ -56,7 +56,7 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 ### How to Install VizionViewer™
 
 #### X86 Platforms
-- [Windows 10 and 11](https://developer.technexion.com/docs/installation#windows)
+- [Windows 10 and 11 (64-bit)](https://developer.technexion.com/docs/installation#windows)
 - [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/installation#linux)
 
 #### Embedded Platforms
