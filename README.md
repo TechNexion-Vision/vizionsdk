@@ -2,7 +2,7 @@
 VizionSDK is a software development kit designed for Windows and Linux platforms, supporting Technexion AR Series Cameras on various platforms like Windows 10/11, Ubuntu, Yocto, NXP-imx8mp, and Nvidia Jetson. It empowers companies and individuals to easily control these cameras and develop custom applications for diverse purposes.
 
 ## What is included in the repository
-- sdk : VizionSDK files for different platforms
+- SDK : VizionSDK files for different platforms
 - Samples : C/C++ samples project source code.
 - doc : API reference documentation and sample documentation.
 ## Supported TechNexion Cameras
