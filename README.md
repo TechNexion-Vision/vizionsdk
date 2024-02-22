@@ -57,7 +57,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/installation#linux)
 
 #### Embedded Platforms
-- [NXP-iMX8MP, NXP-iMX8MM](https://developer.technexion.com/docs/installation#nxpimx8mp-nxpimx8mm)
+- [NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/installation#nxpimx8mp-nxpimx8mm)
 - [NVIDIA-Jetpack5](https://developer.technexion.com/docs/installation#nvidiajetpack-5x)
 
 ## Documents
