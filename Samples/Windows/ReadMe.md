@@ -1,3 +1,9 @@
+# Prerequisites
+
+- [Visual Studio](https://visualstudio.microsoft.com/zh-hant/downloads/) 2017 or later
+- [OpenCV](https://opencv.org/releases/#:~:text=*-,OpenCV%20%E2%80%93%203.4.16,-2021-10-11) (version 3.4.16 or later)
+
+You can refer to [Setting Guide](https://developer.technexion.com/docs/vizionsdk-sample-build-buide-on-windows) for setting up OpenCV on Visual Studio. 
 # Steps to run the VizionSDK sample code:
 
 ## Download the sample code:
