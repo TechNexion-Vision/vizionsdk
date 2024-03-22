@@ -54,14 +54,16 @@ enum class EFFECT_MODE
 	SKETCH_MODE = 0x0F,
 };
 
-enum class FLICK_MODE {
+enum class FLICK_MODE
+{
 	DISABLE = 0x0000,
 	_50HZ = 0x3201,
 	_60HZ = 0x3C01,
 	AUTO = 0x000E,
 };
 
-struct VzFormat {
+struct VzFormat
+{
 	uint8_t mediatype_idx;
 	uint16_t width;
 	uint16_t height;
@@ -72,75 +74,77 @@ struct VzFormat {
 class VizionCam;
 
 #ifndef _VIZIONSDK_FP
-typedef VizionCam* (*fpVcCreateVizionCamDevice)();
-typedef int (*fpVcReleaseVizionCamDevice)(VizionCam*);
-typedef int (*fpVcOpen)(VizionCam*, int dev_idx);
-typedef int (*fpVcClose)(VizionCam*);
-typedef int(*fpVcGetVideoDeviceList)(VizionCam*, std::vector<std::wstring>&);
-typedef int (*fpVcGetVizionCamDeviceName)(VizionCam*, wchar_t*);
+typedef VizionCam *(*fpVcCreateVizionCamDevice)();
+typedef int (*fpVcReleaseVizionCamDevice)(VizionCam *);
+typedef int (*fpVcOpen)(VizionCam *, int dev_idx);
+typedef int (*fpVcClose)(VizionCam *);
+typedef int (*fpVcGetVideoDeviceList)(VizionCam *, std::vector<std::wstring>&);
+typedef int (*fpVcGetVideoDeviceListWithLocation)(VizionCam *, std::vector<struct DeviceListData>&);
+typedef int (*fpVcGetVizionCamDeviceName)(VizionCam *, wchar_t *);
 
-typedef int (*fpVcGetCaptureFormatList)(VizionCam*, std::vector<VzFormat>&);
-typedef int (*fpVcSetCaptureFormat)(VizionCam*, VzFormat);
-typedef int (*fpVcGetRawImageCapture)(VizionCam*, uint8_t*, int* size, uint16_t);
+typedef int (*fpVcGetCaptureFormatList)(VizionCam *, std::vector<VzFormat> &);
+typedef int (*fpVcSetCaptureFormat)(VizionCam *, VzFormat);
+typedef int (*fpVcGetRawImageCapture)(VizionCam *, uint8_t *, int *size, uint16_t);
 
-typedef int (*fpVcGetUniqueSensorID)(VizionCam*, char*);
-typedef int (*fpVcGetSensorUID)(VizionCam*, BYTE*);
+typedef int (*fpVcGetUniqueSensorID)(VizionCam *, char *);
+typedef int (*fpVcGetSensorUID)(VizionCam *, BYTE *);
 
-typedef int (*fpVcResetUVC)(VizionCam*);
-typedef int (*fpVcReadTimeStamp)(VizionCam*, uint32_t&, uint32_t&);
+typedef int (*fpVcResetUVC)(VizionCam *);
+typedef int (*fpVcReadTimeStamp)(VizionCam *, uint32_t &, uint32_t &);
 
-typedef int (*fpVcGetMaxFPS)(VizionCam*, uint8_t&);
-typedef int (*fpVcSetMaxFPS)(VizionCam*, uint8_t);
-typedef int (*fpVcGetAutoExposureMode)(VizionCam*, AE_MODE_STATUS&);
-typedef int (*fpVcSetAutoExposureMode)(VizionCam*, AE_MODE_STATUS);
-typedef int (*fpVcGetExposureTime)(VizionCam*, uint32_t&);
-typedef int (*fpVcSetExposureTime)(VizionCam*, uint32_t);
-typedef int (*fpVcGetExposureGain)(VizionCam*, uint8_t&);
-typedef int (*fpVcSetExposureGain)(VizionCam*, uint8_t);
-typedef int (*fpVcGetCurrentExposureTime)(VizionCam*, uint32_t&);
-typedef int (*fpVcGetCurrentExposureGain)(VizionCam*, uint8_t&);
-typedef int (*fpVcGetBacklightCompensation)(VizionCam*, double&);
-typedef int (*fpVcSetBacklightCompensation)(VizionCam*, double);
+typedef int (*fpVcGetMaxFPS)(VizionCam *, uint8_t &);
+typedef int (*fpVcSetMaxFPS)(VizionCam *, uint8_t);
+typedef int (*fpVcGetAutoExposureMode)(VizionCam *, AE_MODE_STATUS &);
+typedef int (*fpVcSetAutoExposureMode)(VizionCam *, AE_MODE_STATUS);
+typedef int (*fpVcGetExposureTime)(VizionCam *, uint32_t &);
+typedef int (*fpVcSetExposureTime)(VizionCam *, uint32_t);
+typedef int (*fpVcGetExposureGain)(VizionCam *, uint8_t &);
+typedef int (*fpVcSetExposureGain)(VizionCam *, uint8_t);
+typedef int (*fpVcGetCurrentExposureTime)(VizionCam *, uint32_t &);
+typedef int (*fpVcGetCurrentExposureGain)(VizionCam *, uint8_t &);
+typedef int (*fpVcGetBacklightCompensation)(VizionCam *, double &);
+typedef int (*fpVcSetBacklightCompensation)(VizionCam *, double);
 
-typedef int (*fpVcGetAutoWhiteBalanceMode)(VizionCam*, AWB_MODE_STATUS&);
-typedef int (*fpVcSetAutoWhiteBalanceMode)(VizionCam*, AWB_MODE_STATUS);
-typedef int (*fpVcGetTemperature)(VizionCam*, uint16_t&);
-typedef int (*fpVcSetTemperature)(VizionCam*, uint16_t);
+typedef int (*fpVcGetAutoWhiteBalanceMode)(VizionCam *, AWB_MODE_STATUS &);
+typedef int (*fpVcSetAutoWhiteBalanceMode)(VizionCam *, AWB_MODE_STATUS);
+typedef int (*fpVcGetTemperature)(VizionCam *, uint16_t &);
+typedef int (*fpVcSetTemperature)(VizionCam *, uint16_t);
 
-typedef int (*fpVcGetBrightness)(VizionCam*, double&);
-typedef int (*fpVcSetBrightness)(VizionCam*, double);
-typedef int (*fpVcGetGamma)(VizionCam*, double&);
-typedef int (*fpVcSetGamma)(VizionCam*, double);
-typedef int (*fpVcGetSaturation)(VizionCam*, double&);
-typedef int (*fpVcSetSaturation)(VizionCam*, double);
-typedef int (*fpVcGetContrast)(VizionCam*, double&);
-typedef int (*fpVcSetContrast)(VizionCam*, double);
-typedef int (*fpVcGetSharpening)(VizionCam*, double&);
-typedef int (*fpVcSetSharpening)(VizionCam*, double);
-typedef int (*fpVcGetDenoise)(VizionCam*, double&);
-typedef int (*fpVcSetDenoise)(VizionCam*, double);
+typedef int (*fpVcGetBrightness)(VizionCam *, double &);
+typedef int (*fpVcSetBrightness)(VizionCam *, double);
+typedef int (*fpVcGetGamma)(VizionCam *, double &);
+typedef int (*fpVcSetGamma)(VizionCam *, double);
+typedef int (*fpVcGetSaturation)(VizionCam *, double &);
+typedef int (*fpVcSetSaturation)(VizionCam *, double);
+typedef int (*fpVcGetContrast)(VizionCam *, double &);
+typedef int (*fpVcSetContrast)(VizionCam *, double);
+typedef int (*fpVcGetSharpening)(VizionCam *, double &);
+typedef int (*fpVcSetSharpening)(VizionCam *, double);
+typedef int (*fpVcGetDenoise)(VizionCam *, double &);
+typedef int (*fpVcSetDenoise)(VizionCam *, double);
 
-typedef int (*fpVcGetFlipMode)(VizionCam*, FLIP_MODE&);
-typedef int (*fpVcSetFlipMode)(VizionCam*, FLIP_MODE);
-typedef int (*fpVcGetEffectMode)(VizionCam*, EFFECT_MODE&);
-typedef int (*fpVcSetEffectMode)(VizionCam*, EFFECT_MODE);
+typedef int (*fpVcGetFlipMode)(VizionCam *, FLIP_MODE &);
+typedef int (*fpVcSetFlipMode)(VizionCam *, FLIP_MODE);
+typedef int (*fpVcGetEffectMode)(VizionCam *, EFFECT_MODE &);
+typedef int (*fpVcSetEffectMode)(VizionCam *, EFFECT_MODE);
 
-typedef int (*fpGetDigitalZoomType)(VizionCam*, DZ_MODE_STATUS&);
-typedef int (*fpSetDigitalZoomType)(VizionCam*, DZ_MODE_STATUS);
-typedef int (*fpGetDigitalZoomTarget)(VizionCam*, double&);
-typedef int (*fpSetDigitalZoomTarget)(VizionCam*, double);
+typedef int (*fpGetDigitalZoomType)(VizionCam *, DZ_MODE_STATUS &);
+typedef int (*fpSetDigitalZoomType)(VizionCam *, DZ_MODE_STATUS);
+typedef int (*fpGetDigitalZoomTarget)(VizionCam *, double &);
+typedef int (*fpSetDigitalZoomTarget)(VizionCam *, double);
 
-typedef int (*fpVcGetFlickMode)(VizionCam*, FLICK_MODE&);
-typedef int (*fpVcSetFlickMode)(VizionCam*, FLICK_MODE);
+typedef int (*fpVcGetFlickMode)(VizionCam *, FLICK_MODE &);
+typedef int (*fpVcSetFlickMode)(VizionCam *, FLICK_MODE);
 
-typedef int (*fpVcGetJpegQual)(VizionCam*, uint8_t&);
-typedef int (*fpVcSetJpegQual)(VizionCam*, uint8_t);
+typedef int (*fpVcGetJpegQual)(VizionCam *, uint8_t &);
+typedef int (*fpVcSetJpegQual)(VizionCam *, uint8_t);
 
 fpVcCreateVizionCamDevice VcCreateVizionCamDevice;
 fpVcReleaseVizionCamDevice VcReleaseVizionCamDevice;
 fpVcOpen VcOpen;
 fpVcClose VcClose;
 fpVcGetVideoDeviceList VcGetVideoDeviceList;
+fpVcGetVideoDeviceListWithLocation VcGetVideoDeviceListWithLocation;
 fpVcGetVizionCamDeviceName VcGetVizionCamDeviceName;
 
 fpVcGetCaptureFormatList VcGetCaptureFormatList;
@@ -171,18 +175,18 @@ fpVcSetAutoWhiteBalanceMode VcSetAutoWhiteBalanceMode;
 fpVcGetTemperature VcGetTemperature;
 fpVcSetTemperature VcSetTemperature;
 // Tunning
-fpVcGetBrightness    VcGetBrightness;
-fpVcSetBrightness    VcSetBrightness;
-fpVcGetGamma		 VcGetGamma;
-fpVcSetGamma		 VcSetGamma;
-fpVcGetSaturation    VcGetSaturation;
-fpVcSetSaturation    VcSetSaturation;
-fpVcGetContrast      VcGetContrast;
-fpVcSetContrast      VcSetContrast;
-fpVcGetSharpening    VcGetSharpening;
-fpVcSetSharpening    VcSetSharpening;
-fpVcGetDenoise		 VcGetDenoise;
-fpVcSetDenoise		 VcSetDenoise;
+fpVcGetBrightness VcGetBrightness;
+fpVcSetBrightness VcSetBrightness;
+fpVcGetGamma VcGetGamma;
+fpVcSetGamma VcSetGamma;
+fpVcGetSaturation VcGetSaturation;
+fpVcSetSaturation VcSetSaturation;
+fpVcGetContrast VcGetContrast;
+fpVcSetContrast VcSetContrast;
+fpVcGetSharpening VcGetSharpening;
+fpVcSetSharpening VcSetSharpening;
+fpVcGetDenoise VcGetDenoise;
+fpVcSetDenoise VcSetDenoise;
 
 fpVcGetFlipMode VcGetFlipMode;
 fpVcSetFlipMode VcSetFlipMode;
@@ -190,8 +194,8 @@ fpVcGetEffectMode VcGetEffectMode;
 fpVcSetEffectMode VcSetEffectMode;
 
 // Digital Zoom
-fpGetDigitalZoomType   VcGetDigitalZoomType;
-fpSetDigitalZoomType   VcSetDigitalZoomType;
+fpGetDigitalZoomType VcGetDigitalZoomType;
+fpSetDigitalZoomType VcSetDigitalZoomType;
 fpGetDigitalZoomTarget VcGetDigitalZoomTarget;
 fpSetDigitalZoomTarget VcSetDigitalZoomTarget;
 
