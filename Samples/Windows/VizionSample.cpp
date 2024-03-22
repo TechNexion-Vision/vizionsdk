@@ -148,64 +148,7 @@ enum class VzLogLevel
 };
 
 typedef int (*fpVcSetLogLevel)(VzLogLevel);
-typedef int (*fpVcGetVideoDeviceListWithLocation)(VizionCam*, std::vector<struct DeviceListData>&);
-typedef int (*fpVcGetDeviceHardwareID)(VizionCam*, wchar_t*);
-typedef int (*fpVcGetUSBFirmwareVersion)(VizionCam*, char*);
-typedef int (*fpVcGetBootdataHeader)(VizionCam*, VzHeader*);
-typedef int (*fpVcGetBootdataHeaderV3)(VizionCam*, VzHeaderV3*);
-typedef int (*fpVcGetBootdataHeaderFromFile)(VzHeader*, const char*);
-typedef int (*fpVcGetBootdataHeaderV3FromFile)(VzHeaderV3*, const char*);
-typedef int (*fpVcGetTEVSBootdataHeaderV3FromFile)(VzHeaderV3*, const char*);
-typedef int (*fpVcCheckHeaderVer)(VizionCam*);
-typedef int (*fpVcGotoProgramMode)(VizionCam*);
-typedef int (*fpVcClearISPBootdata)(VizionCam*);
-typedef int (*fpVcDownloadBootdata)(VizionCam*, const char*);
-typedef int (*fpVcDumpBootdata)(VizionCam*);
-typedef int (*fpVcStartFWDownload)(FX3_FW_TARGET, const char*);
-typedef int (*fpVcGetOSPProfile)(VizionCam*, VzSensorProfile*);
-typedef int (*fpVcSetOSPProfile)(VizionCam*, VzSensorProfile);
-typedef int (*fpVcCheckOSPProfile)(VizionCam*);
-typedef int (*fpVcGotoSaveOSPProfile)(VizionCam*, uint8_t);
-typedef int (*fpVcUVC_AP1302_I2C_Read)(VizionCam*, uint16_t, uint16_t&);
-typedef int (*fpVcUVC_AP1302_I2C_Write)(VizionCam*, uint16_t, uint16_t);
-typedef int (*fpVcGetOSPProfileConfig)(VizionCam*, std::string&);
-typedef int (*fpVcSetOSPProfileConfig)(VizionCam*, uint8_t, const char*);
-typedef int (*fpVcGetThroughPut)(VizionCam*, uint16_t&);
-typedef int (*fpVcSetThroughPut)(VizionCam*, uint16_t);
-typedef int (*fpVcGetDigitalZoom_CT_X)(VizionCam*, double&);
-typedef int (*fpVcSetDigitalZoom_CT_X)(VizionCam*, double);
-typedef int (*fpVcGetDigitalZoom_CT_Y)(VizionCam*, double&);
-typedef int (*fpVcSetDigitalZoom_CT_Y)(VizionCam*, double);
-
 fpVcSetLogLevel VcSetLogLevel;
-fpVcGetVideoDeviceListWithLocation VcGetVideoDeviceListWithLocation;
-fpVcGetDeviceHardwareID VcGetDeviceHardwareID;
-fpVcGetUSBFirmwareVersion VcGetUSBFirmwareVersion;
-fpVcGetBootdataHeader VcGetBootdataHeader;
-fpVcGetBootdataHeaderV3 VcGetBootdataHeaderV3;
-fpVcGetBootdataHeaderFromFile VcGetBootdataHeaderFromFile;
-fpVcGetBootdataHeaderV3FromFile VcGetBootdataHeaderV3FromFile;
-fpVcGetTEVSBootdataHeaderV3FromFile VcGetTEVSBootdataHeaderV3FromFile;
-fpVcCheckHeaderVer VcCheckHeaderVer;
-fpVcGotoProgramMode VcGotoProgramMode;
-fpVcClearISPBootdata VcClearISPBootdata;
-fpVcDownloadBootdata VcDownloadBootdata;
-fpVcDumpBootdata VcDumpBootdata;
-fpVcStartFWDownload VcStartFWDownload;
-fpVcGetOSPProfile VcGetOSPProfile;
-fpVcSetOSPProfile VcSetOSPProfile;
-fpVcCheckOSPProfile VcCheckOSPProfile;
-fpVcGotoSaveOSPProfile VcGotoSaveOSPProfile;
-fpVcUVC_AP1302_I2C_Read VcUVC_AP1302_I2C_Read;
-fpVcUVC_AP1302_I2C_Write VcUVC_AP1302_I2C_Write;
-fpVcGetOSPProfileConfig VcGetOSPProfileConfig;
-fpVcSetOSPProfileConfig VcSetOSPProfileConfig;
-fpVcGetThroughPut VcGetThroughPut;
-fpVcSetThroughPut VcSetThroughPut;
-fpVcGetDigitalZoom_CT_X VcGetDigitalZoom_CT_X;
-fpVcSetDigitalZoom_CT_X VcSetDigitalZoom_CT_X;
-fpVcGetDigitalZoom_CT_Y VcGetDigitalZoom_CT_Y;
-fpVcSetDigitalZoom_CT_Y VcSetDigitalZoom_CT_Y;
 
 template <typename FP>
 int LoadVcFunc(FP& fp, std::string func_name)
@@ -225,36 +168,11 @@ int LoadVizionFunc()
 	if (LoadVcFunc(VcGetVideoDeviceList, "VcGetVideoDeviceList")) return -1;
 	if (LoadVcFunc(VcGetVideoDeviceListWithLocation, "VcGetVideoDeviceListWithLocation")) return -1;
 	if (LoadVcFunc(VcGetVizionCamDeviceName, "VcGetVizionCamDeviceName")) return -1;
-	if (LoadVcFunc(VcGetDeviceHardwareID, "VcGetDeviceHardwareID")) return -1;
 	if (LoadVcFunc(VcGetCaptureFormatList, "VcGetCaptureFormatList")) return -1;
 	if (LoadVcFunc(VcSetCaptureFormat, "VcSetCaptureFormat")) return -1;
 	if (LoadVcFunc(VcGetRawImageCapture, "VcGetRawImageCapture")) return -1;
-	if (LoadVcFunc(VcGetUSBFirmwareVersion, "VcGetUSBFirmwareVersion")) return -1;
-	if (LoadVcFunc(VcGetBootdataHeader, "VcGetBootdataHeader")) return -1;
-	if (LoadVcFunc(VcGetBootdataHeaderV3, "VcGetBootdataHeaderV3")) return -1;
-	if (LoadVcFunc(VcGetBootdataHeaderFromFile, "VcGetBootdataHeaderFromFile")) return -1;
-	if (LoadVcFunc(VcGetBootdataHeaderV3FromFile, "VcGetBootdataHeaderV3FromFile")) return -1;
-	if (LoadVcFunc(VcGetTEVSBootdataHeaderV3FromFile, "VcGetTEVSBootdataHeaderV3FromFile")) return -1;
-	if (LoadVcFunc(VcCheckHeaderVer, "VcCheckHeaderVer")) return -1;
 	if (LoadVcFunc(VcGetUniqueSensorID, "VcGetUniqueSensorID")) return -1;
 	if (LoadVcFunc(VcGetSensorUID, "VcGetSensorUID")) return -1;
-	if (LoadVcFunc(VcGotoProgramMode, "VcGotoProgramMode")) return -1;
-	if (LoadVcFunc(VcClearISPBootdata, "VcClearISPBootdata")) return -1;
-	if (LoadVcFunc(VcDownloadBootdata, "VcDownloadBootdata")) return -1;
-	if (LoadVcFunc(VcDumpBootdata, "VcDumpBootdata")) return -1;
-	if (LoadVcFunc(VcStartFWDownload, "VcStartFWDownload")) return -1;
-	if (LoadVcFunc(VcResetUVC, "VcResetUVC")) return -1;
-	if (LoadVcFunc(VcReadTimeStamp, "VcReadTimeStamp")) return -1;
-	if (LoadVcFunc(VcGetOSPProfile, "VcGetOSPProfile")) return -1;
-	if (LoadVcFunc(VcSetOSPProfile, "VcSetOSPProfile")) return -1;
-	if (LoadVcFunc(VcCheckOSPProfile, "VcCheckOSPProfile")) return -1;
-	if (LoadVcFunc(VcGotoSaveOSPProfile, "VcGotoSaveOSPProfile")) return -1;
-	if (LoadVcFunc(VcUVC_AP1302_I2C_Read, "VcUVC_AP1302_I2C_Read")) return -1;
-	if (LoadVcFunc(VcUVC_AP1302_I2C_Write, "VcUVC_AP1302_I2C_Write")) return -1;
-	if (LoadVcFunc(VcGetOSPProfileConfig, "VcGetOSPProfileConfig")) return -1;
-	if (LoadVcFunc(VcSetOSPProfileConfig, "VcSetOSPProfileConfig")) return -1;
-	if (LoadVcFunc(VcGetThroughPut, "VcGetThroughPut")) return -1;
-	if (LoadVcFunc(VcSetThroughPut, "VcSetThroughPut")) return -1;
 	if (LoadVcFunc(VcGetMaxFPS, "VcGetMaxFPS")) return -1;
 	if (LoadVcFunc(VcSetMaxFPS, "VcSetMaxFPS")) return -1;
 	if (LoadVcFunc(VcGetAutoExposureMode, "VcGetAutoExposureMode")) return -1;
@@ -291,10 +209,6 @@ int LoadVizionFunc()
 	if (LoadVcFunc(VcSetDigitalZoomType, "VcSetDigitalZoomType")) return -1;
 	if (LoadVcFunc(VcGetDigitalZoomTarget, "VcGetDigitalZoomTarget")) return -1;
 	if (LoadVcFunc(VcSetDigitalZoomTarget, "VcSetDigitalZoomTarget")) return -1;
-	if (LoadVcFunc(VcGetDigitalZoom_CT_X, "VcGetDigitalZoom_CT_X")) return -1;
-	if (LoadVcFunc(VcSetDigitalZoom_CT_X, "VcSetDigitalZoom_CT_X")) return -1;
-	if (LoadVcFunc(VcGetDigitalZoom_CT_Y, "VcGetDigitalZoom_CT_Y")) return -1;
-	if (LoadVcFunc(VcSetDigitalZoom_CT_Y, "VcSetDigitalZoom_CT_Y")) return -1;
 	if (LoadVcFunc(VcGetFlickMode, "VcGetFlickMode")) return -1;
 	if (LoadVcFunc(VcSetFlickMode, "VcSetFlickMode")) return -1;
 	if (LoadVcFunc(VcGetJpegQual, "VcGetJpegQual")) return -1;
@@ -419,25 +333,6 @@ int main()
 		return -1;
 	}
 
-	char usb_fw_ver[16];
-	if (VcGetUSBFirmwareVersion(vzcam, usb_fw_ver) != 0) {
-		std::cout << "Get USB FW Version Fail" << std::endl;
-		return -1;
-	}
-	std::cout << "USB FW Version: " << usb_fw_ver << std::endl;
-
-	// Continue or Clear or Download AP1302 ISP Bootdata
-	std::string bin_file;
-
-
-	struct VzHeaderV3 header;
-	int ver = 0;
-	ver = VcCheckHeaderVer(vzcam);
-	if (ver == 3) {
-		VcGetBootdataHeaderV3(vzcam, &header);
-		std::cout << "Header Version: " << (int)header.header_version << " Name: " << header.product_name << std::endl;
-	}
-
 	BYTE sensor_id[16] = { 0 };
 	VcGetSensorUID(vzcam, sensor_id);
 	std::cout << "Sensor UID: " << std::hex << std::uppercase << (int)sensor_id[0] << (int)sensor_id[1] << (int)sensor_id[2] << (int)sensor_id[3]
@@ -466,8 +361,6 @@ int main()
 
 	std::thread t1(showImage, vzformatlist[sel].width, vzformatlist[sel].height, vzformatlist[sel].format);
 	t1.detach();
-
-
 
 	// Test MJPEG QUAL
 	uint16_t qual;
@@ -511,24 +404,6 @@ int main()
 		printf("Current Max FPS: %d fps\n", max_fps);
 	}
 
-	// Test Throughput
-	VcGetThroughPut(vzcam, throughput);
-	printf("Get Throughput: %d\n", throughput);
-
-	while (true) {
-		std::cout << "Enter Throughput: (1 ~ 600 Mbps, set 0 to quit the program)" << std::endl;
-		std::cin >> throughput;
-
-		if (throughput == 0) { std::cout << "Leave zoom setting program..." << std::endl;  break; }
-
-		if (throughput > 600 || throughput < 1) { std::cout << "Just support Range: 1 ~ 600 Mbps!" << std::endl;  continue; }
-
-		VcSetThroughPut(vzcam, throughput);
-		VcGetThroughPut(vzcam, throughput);
-
-		printf("Current Throughput: %d\n", throughput);
-	}
-
 	// Test Exposure Time
 	VcGetCurrentExposureTime(vzcam, exp_time);
 	printf("Get Current AE Exposure Time: %d us\n", exp_time);
@@ -551,6 +426,9 @@ int main()
 		printf("Current Exposure Time: %d ms\n", exp_time / 1000);
 	}
 
+	ae_mode = AE_MODE_STATUS::AUTO_EXP;
+	VcSetAutoExposureMode(vzcam, ae_mode);
+
 	// Test Zoom Target
 	VcGetDigitalZoomTarget(vzcam, dz_tgt);
 	printf("Get Digital Zoom Target: %f x\n", dz_tgt);
@@ -567,30 +445,6 @@ int main()
 
 		VcGetDigitalZoomTarget(vzcam, dz_tgt);
 		printf("Current Digital Zoom Target: %f x\n", dz_tgt);
-	}
-
-	// Test UVC XU I2C control
-	while (true) {
-		std::cout << "Enter I2C Read Address: (set 0 to quit the program)" << std::endl;
-		std::cin >> i2c_addr;
-
-		if (i2c_addr == 0) { std::cout << "Leave xu i2c read program..." << std::endl;  break; }
-
-		VcUVC_AP1302_I2C_Read(vzcam, i2c_addr, i2c_data);
-		printf("XU I2C read addr (0x%04x): 0x%04x\n", i2c_addr, i2c_data);
-	}
-
-	while (true) {
-		std::cout << "Enter I2C Write Address: (set 0 to quit the program)" << std::endl;
-		std::cin >> i2c_addr;
-
-		if (i2c_addr == 0) { std::cout << "Leave xu i2c read program..." << std::endl;  break; }
-
-		std::cout << "Enter I2C Write Data: " << std::endl;
-		std::cin >> i2c_data;
-
-		VcUVC_AP1302_I2C_Write(vzcam, i2c_addr, i2c_data);
-		printf("XU I2C write addr (0x%04x): 0x%04x\n", i2c_addr, i2c_data);
 	}
 
 	preview = false;
