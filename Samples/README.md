@@ -38,10 +38,3 @@ Before building and running this project, ensure you have the following installe
 
 - After successful building, you will find the executable `VizionSample` in the `build` directory. You can run it from the terminal by executing `./VizionSample`.
 
-## Notes
-
-- This project uses CMake to manage the build process. You can customize the build options by modifying `CMakeLists.txt`.
-- Platform-specific configurations are applied automatically during the build process based on the detected platform (Windows or Linux).
-- Ensure that all necessary dependencies are installed before building the project.
-
-For more information about CMake, refer to the [official documentation](https://cmake.org/documentation/).
