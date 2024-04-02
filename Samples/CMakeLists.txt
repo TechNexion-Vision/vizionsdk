@@ -17,6 +17,7 @@ set(HEADERS
 if(WIN32)
     add_definitions(-D_WIN32)
     add_definitions(-DUNICODE)
+    set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "Configurations" FORCE)
 elseif(UNIX)
     add_definitions(-D_LINUX)
 endif()
