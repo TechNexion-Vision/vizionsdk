@@ -47,7 +47,6 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 ## Supported Platforms
 - Windows 10/11
 - Ubuntu
-- Yocto
 - NXP i.MX8MP
 - NXP i.MX8MM
 - Jetson Nano
