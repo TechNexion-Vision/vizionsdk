@@ -52,7 +52,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - NXP i.MX8MM
 - NVIDIA Jetpack 5
 - NVIDIA Jetpack 4
-- 
+  
 ## VizionViewer™
 
 VizionViewer™ is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
