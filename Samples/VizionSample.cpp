@@ -5,12 +5,16 @@
 
 #ifdef _WIN32
 #include <Windows.h>
+#define _STR(str) L#str
+#define _SLEEP(ms) Sleep(ms)
 #else
 #include <dlfcn.h>
 #include <unistd.h>
 #include <limits.h>
 #include <link.h>
 typedef unsigned char BYTE;
+#define _STR(str) #str
+#define _SLEEP(ms) usleep(ms * 1000)
 #endif
 
 #include "VizionSDK.h"
@@ -266,11 +270,7 @@ int main()
 	}
 
 	// Tevs Version
-#ifdef _WIN32
-	if (devlist[0].deviceName.find(L"TEVS") != std::string::npos || devlist[0].deviceName.find(L"VLS") != std::string::npos)
-#else
-	if (devlist[0].deviceName.find("TEVS") != std::string::npos || devlist[0].deviceName.find("VLS") != std::string::npos)
-#endif
+	if (devlist[0].deviceName.find(_STR("TEVS")) != std::string::npos || devlist[0].deviceName.find(_STR("VLS")) != std::string::npos)
 	{
 		char tevsVersion[16];
 		if (VcGetTEVSFirmwareVersion(vzcam, tevsVersion) == 0)
@@ -299,11 +299,8 @@ int main()
 	}
 
 	VcSetCaptureFormat(vzcam, vzformatlist[sel]);
-#ifdef _WIN32
-	Sleep(10);
-#else
-	usleep(10);
-#endif
+	_SLEEP(10);
+
 	int size = 0;
 	int timeout = 3000;
 	g_width = vzformatlist[sel].width;
@@ -333,11 +330,7 @@ int main()
 				return -1;
 			}
 		}
-#ifdef _WIN32
-		Sleep(10);
-#else
-		usleep(10);
-#endif
+		_SLEEP(10);
 	}
 
 	// Save image
