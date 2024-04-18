@@ -83,80 +83,42 @@ int LoadVizionFunc()
 }
 
 #ifdef _WIN32
-
-typedef BOOL(WINAPI* LPGetFileVersionInfoSizeW)(
-	LPCWSTR lptstrFilename,
-	LPDWORD lpdwHandle);
-
-typedef BOOL(WINAPI* LPGetFileVersionInfoW)(
-	LPCWSTR lptstrFilename,
-	DWORD dwHandle,
-	DWORD dwLen,
-	LPVOID lpData);
-
-typedef BOOL(WINAPI* LPVerQueryValueW)(
-	LPCVOID pBlock,
-	LPCWSTR lpSubBlock,
-	LPVOID* lplpBuffer,
-	PUINT puLen);
-
-std::string GetFileVersion(const std::wstring& filePath)
+std::string GetFileVersion(const std::string filePath)
 {
-	HMODULE hModule = LoadLibrary(L"Version.dll");
-	if (hModule == NULL)
-	{
-		std::cerr << "Error loading Version.dll" << std::endl;
-		return "";
-	}
-
-	LPGetFileVersionInfoSizeW lpGetFileVersionInfoSizeW = reinterpret_cast<LPGetFileVersionInfoSizeW>(GetProcAddress(hModule, "GetFileVersionInfoSizeW"));
-	LPGetFileVersionInfoW lpGetFileVersionInfoW = reinterpret_cast<LPGetFileVersionInfoW>(GetProcAddress(hModule, "GetFileVersionInfoW"));
-	LPVerQueryValueW lpVerQueryValueW = reinterpret_cast<LPVerQueryValueW>(GetProcAddress(hModule, "VerQueryValueW"));
-
-	if (lpGetFileVersionInfoSizeW == NULL || lpGetFileVersionInfoW == NULL || lpVerQueryValueW == NULL)
-	{
-		std::cerr << "Error getting addresses of Version.dll functions" << std::endl;
-		FreeLibrary(hModule);
-		return "";
-	}
-
+	std::string ret_str;
 	DWORD dwHandle = 0;
-	DWORD dwSize = lpGetFileVersionInfoSizeW(filePath.c_str(), &dwHandle);
+	DWORD dwSize = GetFileVersionInfoSizeA(filePath.c_str(), &dwHandle);
+	BYTE* pBuffer;
 	if (dwSize == 0)
 	{
 		std::cerr << "Error in GetFileVersionInfoSize: " << GetLastError() << std::endl;
-		FreeLibrary(hModule);
-		return "";
+		goto done;
 	}
 
-	BYTE* pBuffer = new BYTE[dwSize];
-	if (!lpGetFileVersionInfoW(filePath.c_str(), dwHandle, dwSize, pBuffer))
+	pBuffer = new BYTE[dwSize];
+
+	if (!GetFileVersionInfoA(filePath.c_str(), dwHandle, dwSize, pBuffer))
 	{
 		std::cerr << "Error in GetFileVersionInfo: " << GetLastError() << std::endl;
-		delete[] pBuffer;
-		FreeLibrary(hModule);
-		return "";
+		goto done;
 	}
 
 	VS_FIXEDFILEINFO* pFileInfo = nullptr;
-	UINT puLenFileInfo = 0;
-	if (!lpVerQueryValueW(pBuffer, L"\\", reinterpret_cast<LPVOID*>(&pFileInfo), &puLenFileInfo))
+	if (!VerQueryValueA(pBuffer, "\\", (LPVOID*)(&pFileInfo), NULL))
 	{
 		std::cerr << "Error in VerQueryValue: " << GetLastError() << std::endl;
-		delete[] pBuffer;
-		FreeLibrary(hModule);
-		return "";
+		goto done;
 	}
 
-	int majorVersion = HIWORD(pFileInfo->dwProductVersionMS);
-	int minorVersion = LOWORD(pFileInfo->dwProductVersionMS);
-	int revision = HIWORD(pFileInfo->dwProductVersionLS);
-	int buildNumber = LOWORD(pFileInfo->dwProductVersionLS);
+	ret_str = std::to_string(HIWORD(pFileInfo->dwProductVersionMS)) + "."
+			+ std::to_string(LOWORD(pFileInfo->dwProductVersionMS)) + "."
+			+ std::to_string(HIWORD(pFileInfo->dwProductVersionLS)) + "."
+			+ std::to_string(LOWORD(pFileInfo->dwProductVersionLS));
 
-	delete[] pBuffer;
-	FreeLibrary(hModule);
-
-	return std::to_string(majorVersion) + "." + std::to_string(minorVersion) + "." + std::to_string(revision) + "." + std::to_string(buildNumber);
+done:
+	if(pBuffer != nullptr)
+		delete[] pBuffer;
+	return ret_str;
 }
 #else 
 std::string GetFileVersion(void* handle)
@@ -207,7 +169,7 @@ int main()
 		return -1;
 
 #ifdef _WIN32
-	std::wstring filePath = L"VizionSDK.dll";
+	std::string filePath = "VizionSDK.dll";
 	std::string version = GetFileVersion(filePath);
 	if (!version.empty())
 	{
@@ -235,15 +197,12 @@ int main()
 	}
 
 	int i = 0;
-	std::cout << "Select Camera" << std::endl;
+	std::cout << "Select Camera:" << std::endl;
 	for (const auto& device : devlist)
-	{
-#ifdef _WIN32
-		std::wcout << "[" << i++ << "] " << L"Device Name: " << device.deviceName << L", Hardware ID: " << device.hardwareId << L", Serial Number: " << device.serialNumber.c_str() << std::endl;
-#else
-		std::cout << "[" << i++ << "] " << "Device Name: " << device.deviceName << ", Hardware ID: " << device.hardwareID << ", Serial Number: " << device.serialNumber.c_str() << std::endl;
-#endif
-	}
+		_STDOUT << "[" << i++ << "] " << "Device Name: " << device.deviceName \
+		<< ", Hardware ID: " << device.hardwareId << \
+		", Serial Number: " << device.serialNumber << std::endl;
+
 	std::cin >> startup;
 
 	if (VcOpen(vzcam, startup) != 0)

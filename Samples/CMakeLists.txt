@@ -18,9 +18,10 @@ if(WIN32)
     add_definitions(-D_WIN32)
     add_definitions(-DUNICODE)
     set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "Configurations" FORCE)
+    add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+    # target link for Version.lib
+    target_link_libraries(${PROJECT_NAME} "Version.lib")
 elseif(UNIX)
     add_definitions(-D_LINUX)
+    add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 endif()
-
-# Add executable target
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
