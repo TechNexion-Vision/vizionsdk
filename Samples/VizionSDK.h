@@ -1,5 +1,11 @@
 #pragma once
 
+#ifdef _WIN32
+#define _TYPE_STRING std::wstring
+#else
+#define _TYPE_STRING std::string
+#endif
+
 enum VZ_IMAGE_FORMAT
 {
 	NONE = 0,
@@ -69,6 +75,114 @@ struct VzFormat {
 	VZ_IMAGE_FORMAT format;
 };
 
+// internal function pointer
+#pragma pack(push, 1)
+struct VzHeader
+{
+	uint8_t header_version;
+	uint16_t content_offset;
+	uint8_t product_name[64];
+	uint8_t product_version;
+	uint8_t head_info[64];
+	uint8_t lens_version;
+	uint8_t content_version;
+	uint32_t content_checksum;
+	uint32_t content_len;
+	uint16_t pll_bootdata_len;
+};
+
+struct VzHeaderV3
+{ // Header Version 3
+	// Fixed Area
+	uint8_t header_version;
+	uint16_t content_offset;
+	uint16_t sensor_type;
+	uint8_t sensor_fuseid[16];
+	uint8_t product_name[64];
+	uint8_t lens_id[16];
+	uint16_t fix_checksum;
+	// Dynamic update area
+	uint8_t tn_fw_version[2];
+	uint16_t vendor_fw_version;
+	uint16_t custom_number; // or revision number
+	uint8_t build_year;
+	uint8_t build_month;
+	uint8_t build_day;
+	uint8_t build_hour;
+	uint8_t build_minute;
+	uint8_t build_second;
+	uint16_t mipi_datarate;
+	uint32_t content_len;
+	uint16_t content_checksum;
+	uint16_t total_checksum;
+};
+
+struct VzSensorProfile
+{
+	uint8_t profile_check;
+	uint16_t profile_len;
+	uint16_t pre_width;
+	uint16_t pre_height;
+	uint8_t pre_format;
+	uint8_t sensor_mode;
+	uint16_t pre_throughput;
+	uint8_t pre_maxfps;
+	uint32_t pre_ae_upper;
+	uint32_t pre_ae_max;
+	uint16_t pre_hinf_ctrl;
+	uint8_t ae_mode;
+	uint32_t exp_time;
+	uint8_t exp_gain;
+	uint16_t backlight_comp;
+	uint8_t awb_mode;
+	uint16_t awb_tmp;
+	uint16_t brightness;
+	uint16_t contrast;
+	uint16_t saturation;
+	uint16_t gamma;
+	uint16_t denoise;
+	uint16_t sharpen;
+	uint8_t flip;
+	uint8_t effect;
+	uint16_t zoom_type;
+	uint16_t zoom_times;
+	uint16_t ct_x;
+	uint16_t ct_y;
+	uint16_t trigger_mode;
+	uint16_t flick_ctrl;
+	uint8_t jpeg_qual;
+	uint16_t reserved[9];
+	uint16_t profile_checksum;
+};
+#pragma pack(pop)
+
+struct DeviceListData
+{
+	_TYPE_STRING deviceName;
+	_TYPE_STRING hardwareId;
+	_TYPE_STRING serialNumber;
+	_TYPE_STRING portNumber;
+};
+
+enum class FX3_FW_TARGET
+{
+	FW_TARGET_NONE = 0, /* Invalid target					*/
+	FW_TARGET_RAM,		/* Program firmware (hex) to RAM	*/
+	FW_TARGET_I2C,		/* Program firmware (hex) to EEPROM	*/
+	FW_TARGET_SPI		/* Program firmware (hex) to SPI	*/
+};
+
+enum class VzLogLevel
+{
+	VZ_LOG_LEVEL_TRACE,
+	VZ_LOG_LEVEL_DEBUG,
+	VZ_LOG_LEVEL_INFO,
+	VZ_LOG_LEVEL_WARN,
+	VZ_LOG_LEVEL_ERROR,
+	VZ_LOG_LEVEL_CRITICAL,
+	VZ_LOG_LEVEL_OFF,
+};
+
 class VizionCam;
 
 #ifndef _VIZIONSDK_FP
@@ -136,6 +250,14 @@ typedef int (*fpVcSetFlickMode)(VizionCam*, FLICK_MODE);
 typedef int (*fpVcGetJpegQual)(VizionCam*, uint8_t&);
 typedef int (*fpVcSetJpegQual)(VizionCam*, uint8_t);
 
+typedef int (*fpVcSetLogLevel)(VzLogLevel);
+typedef int (*fpVcGetVideoDeviceListWithLocation)(VizionCam*, std::vector<struct DeviceListData>&);
+typedef int (*fpVcGetUSBFirmwareVersion)(VizionCam*, char*);
+typedef int (*fpVcGetBootdataHeader)(VizionCam*, VzHeader*);
+typedef int (*fpVcGetBootdataHeaderV3)(VizionCam*, VzHeaderV3*);
+typedef int (*fpVcCheckHeaderVer)(VizionCam*);
+typedef int (*fpVcGetTEVSFirmwareVersion)(VizionCam*, char*);
+
 fpVcCreateVizionCamDevice VcCreateVizionCamDevice;
 fpVcReleaseVizionCamDevice VcReleaseVizionCamDevice;
 fpVcOpen VcOpen;
@@ -202,5 +324,13 @@ fpVcSetFlickMode VcSetFlickMode;
 // JPEG Qual
 fpVcGetJpegQual VcGetJpegQual;
 fpVcSetJpegQual VcSetJpegQual;
+
+fpVcSetLogLevel VcSetLogLevel;
+fpVcGetVideoDeviceListWithLocation VcGetVideoDeviceListWithLocation;
+fpVcGetUSBFirmwareVersion VcGetUSBFirmwareVersion;
+fpVcGetBootdataHeader VcGetBootdataHeader;
+fpVcGetBootdataHeaderV3 VcGetBootdataHeaderV3;
+fpVcCheckHeaderVer VcCheckHeaderVer;
+fpVcGetTEVSFirmwareVersion VcGetTEVSFirmwareVersion;
 
 #endif
