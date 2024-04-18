@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <sstream>
+#include <fstream>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -80,6 +80,27 @@ int LoadVizionFunc()
 		return -1;
 
 	return 0;
+}
+
+void SaveImageFile(const char* filename, const unsigned char* data, int size) {
+    std::ofstream file(filename, std::ios::out | std::ios::binary);
+
+    if (!file.is_open()) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return;
+    }
+
+    file.write(reinterpret_cast<const char*>(data), size);
+
+    if (!file.good()) {
+        std::cerr << "Failed to write to file: " << filename << std::endl;
+        file.close();
+        return;
+    }
+
+    file.close();
+
+    std::cout << "Save Image Successfully!" << std::endl;
 }
 
 #ifdef _WIN32
@@ -320,37 +341,7 @@ int main()
 	}
 
 	// Save image
-#ifdef _WIN32
-	HANDLE hFile = CreateFileA("image.raw", GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
-	if (hFile != INVALID_HANDLE_VALUE)
-	{
-		DWORD bytesWritten;
-		BOOL result = WriteFile(hFile, img_arr, size, &bytesWritten, NULL);
-		if (result != FALSE)
-			std::cout << "Save image finish" << std::endl;
-		else
-			std::cerr << "Failed to write to file" << std::endl;
-		CloseHandle(hFile);
-	}
-	else
-	{
-		std::cerr << "Failed to create file" << std::endl;
-	}
-#else
-	FILE* file = fopen("image.raw", "wb");
-	if (file != NULL)
-	{
-		size_t elements_written = fwrite(img_arr, size, 1, file);
-		if (elements_written == 1)
-			std::cout << "Save image finish" << std::endl;
-		else
-			std::cerr << "Failed to write to file" << std::endl;
-	}
-	else
-		std::cerr << "Failed to create file" << std::endl;
-
-	fclose(file);
-#endif
+	SaveImageFile("image.raw", img_arr, size);
 
 	std::cout << "Press any key to exit..." << std::endl;
 	std::cin.ignore();
