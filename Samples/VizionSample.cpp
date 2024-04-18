@@ -5,6 +5,9 @@
 
 #ifdef _WIN32
 #include <Windows.h>
+
+#define _TYPE_STRING std::wstring
+#define _STDOUT      std::wcout
 #define _STR(str) L#str
 #define _SLEEP(ms) Sleep(ms)
 #else
@@ -12,7 +15,11 @@
 #include <unistd.h>
 #include <limits.h>
 #include <link.h>
+
 typedef unsigned char BYTE;
+
+#define _TYPE_STRING std::string
+#define _STDOUT      std::cout
 #define _STR(str) #str
 #define _SLEEP(ms) usleep(ms * 1000)
 #endif

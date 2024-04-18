@@ -1,13 +1,5 @@
 #pragma once
 
-#ifdef _WIN32
-#define _TYPE_STRING std::wstring
-#define _STDOUT      std::wcout
-#else
-#define _TYPE_STRING std::string
-#define _STDOUT      std::cout
-#endif
-
 enum VZ_IMAGE_FORMAT
 {
 	NONE = 0,
