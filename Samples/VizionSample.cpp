@@ -25,13 +25,8 @@ VizionCam* vzcam;
 AE_MODE_STATUS ae_mode;
 AWB_MODE_STATUS awb_mode;
 
-#ifdef _WIN32
-UINT g_width = 0, g_height = 0;
-#else 
-uint8_t g_width = 0, g_height = 0;
-#endif
+uint16_t g_width = 0, g_height = 0;
 uint8_t* img_arr;
-uint8_t* raw_arr;
 
 std::vector<DeviceListData> devlist;
 
