@@ -154,8 +154,8 @@ struct DeviceListData
 {
 	_TYPE_STRING deviceName;
 	_TYPE_STRING hardwareId;
-	_TYPE_STRING serialNumber;
-	_TYPE_STRING portNumber;
+	std::string serialNumber;
+	std::string portNumber;
 };
 
 enum class FX3_FW_TARGET

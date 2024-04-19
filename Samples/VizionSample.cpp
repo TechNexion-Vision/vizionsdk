@@ -85,6 +85,7 @@ int LoadVizionFunc()
 		return -1;
 	if (LoadVcFunc(VcGetBootdataHeaderV3, "VcGetBootdataHeaderV3"))
 		return -1;
+
 	if (LoadVcFunc(VcCheckHeaderVer, "VcCheckHeaderVer"))
 		return -1;
 	if (LoadVcFunc(VcGetTEVSFirmwareVersion, "VcGetTEVSFirmwareVersion"))
@@ -233,7 +234,7 @@ int main()
 	for (const auto& device : devlist)
 		_STDOUT << "[" << i++ << "] " << "Device Name: " << device.deviceName \
 		<< ", Hardware ID: " << device.hardwareId << \
-		", Serial Number: " << device.serialNumber << std::endl;
+		", Serial Number: " << device.serialNumber.c_str() << std::endl;
 
 	std::cin >> startup;
 
