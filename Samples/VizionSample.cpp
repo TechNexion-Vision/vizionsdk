@@ -7,9 +7,12 @@
 #include <Windows.h>
 
 #define _TYPE_STRING std::wstring
-#define _STDOUT      std::wcout
+#define _STDOUT std::wcout
 #define _STR(str) L#str
 #define _SLEEP(ms) Sleep(ms)
+#define LIBRARY_NAME L"VizionSDK.dll"
+#define loadLibrary() LoadLibrary(LIBRARY_NAME)
+HINSTANCE hs_vizionsdk;
 #else
 #include <dlfcn.h>
 #include <unistd.h>
@@ -19,30 +22,27 @@
 typedef unsigned char BYTE;
 
 #define _TYPE_STRING std::string
-#define _STDOUT      std::cout
+#define _STDOUT std::cout
 #define _STR(str) #str
 #define _SLEEP(ms) usleep(ms * 1000)
+#define LIBRARY_NAME "libVizionSDK.so"
+#define loadLibrary() dlopen(LIBRARY_NAME, RTLD_LAZY)
+void *hs_vizionsdk;
 #endif
 
 #include "VizionSDK.h"
 
-#ifdef _WIN32
-HINSTANCE hs_vizionsdk;
-#else
-void* hs_vizionsdk;
-#endif
-
-VizionCam* vzcam;
+VizionCam *vzcam;
 AE_MODE_STATUS ae_mode;
 AWB_MODE_STATUS awb_mode;
 
 uint16_t g_width = 0, g_height = 0;
-uint8_t* img_arr;
+uint8_t *img_arr;
 
 std::vector<DeviceListData> devlist;
 
 template <typename FP>
-int LoadVcFunc(FP& fp, std::string func_name)
+int LoadVcFunc(FP &fp, std::string func_name)
 {
 #ifdef _WIN32
 	fp = (FP)GetProcAddress(hs_vizionsdk, func_name.c_str());
@@ -94,25 +94,28 @@ int LoadVizionFunc()
 	return 0;
 }
 
-void SaveImageFile(const char* filename, const unsigned char* data, int size) {
-    std::ofstream file(filename, std::ios::out | std::ios::binary);
+void SaveImageFile(const char *filename, const unsigned char *data, int size)
+{
+	std::ofstream file(filename, std::ios::out | std::ios::binary);
 
-    if (!file.is_open()) {
-        std::cerr << "Failed to open file: " << filename << std::endl;
-        return;
-    }
+	if (!file.is_open())
+	{
+		std::cerr << "Failed to open file: " << filename << std::endl;
+		return;
+	}
 
-    file.write(reinterpret_cast<const char*>(data), size);
+	file.write(reinterpret_cast<const char *>(data), size);
 
-    if (!file.good()) {
-        std::cerr << "Failed to write to file: " << filename << std::endl;
-        file.close();
-        return;
-    }
+	if (!file.good())
+	{
+		std::cerr << "Failed to write to file: " << filename << std::endl;
+		file.close();
+		return;
+	}
 
-    file.close();
+	file.close();
 
-    std::cout << "Save Image Successfully!" << std::endl;
+	std::cout << "Save Image Successfully!" << std::endl;
 }
 
 #ifdef _WIN32
@@ -121,7 +124,7 @@ std::string GetFileVersion(const std::string filePath)
 	std::string ret_str;
 	DWORD dwHandle = 0;
 	DWORD dwSize = GetFileVersionInfoSizeA(filePath.c_str(), &dwHandle);
-	BYTE* pBuffer;
+	BYTE *pBuffer;
 	if (dwSize == 0)
 	{
 		std::cerr << "Error in GetFileVersionInfoSize: " << GetLastError() << std::endl;
@@ -136,39 +139,39 @@ std::string GetFileVersion(const std::string filePath)
 		goto done;
 	}
 
-	VS_FIXEDFILEINFO* pFileInfo = nullptr;
-	if (!VerQueryValueA(pBuffer, "\\", (LPVOID*)(&pFileInfo), NULL))
+	VS_FIXEDFILEINFO *pFileInfo = nullptr;
+	if (!VerQueryValueA(pBuffer, "\\", (LPVOID *)(&pFileInfo), NULL))
 	{
 		std::cerr << "Error in VerQueryValue: " << GetLastError() << std::endl;
 		goto done;
 	}
 
-	ret_str = std::to_string(HIWORD(pFileInfo->dwProductVersionMS)) + "."
-			+ std::to_string(LOWORD(pFileInfo->dwProductVersionMS)) + "."
-			+ std::to_string(HIWORD(pFileInfo->dwProductVersionLS)) + "."
-			+ std::to_string(LOWORD(pFileInfo->dwProductVersionLS));
+	ret_str = std::to_string(HIWORD(pFileInfo->dwProductVersionMS)) + "." + std::to_string(LOWORD(pFileInfo->dwProductVersionMS)) + "." + std::to_string(HIWORD(pFileInfo->dwProductVersionLS)) + "." + std::to_string(LOWORD(pFileInfo->dwProductVersionLS));
 
 done:
-	if(pBuffer != nullptr)
+	if (pBuffer != nullptr)
 		delete[] pBuffer;
 	return ret_str;
 }
-#else 
-std::string GetFileVersion(void* handle)
+#else
+std::string GetFileVersion(void *handle)
 {
 	std::string version = "";
 
-	struct link_map* map;
-	if (dlinfo(handle, RTLD_DI_LINKMAP, &map) == -1) {
+	struct link_map *map;
+	if (dlinfo(handle, RTLD_DI_LINKMAP, &map) == -1)
+	{
 		return version;
 	}
 
 	char buf[PATH_MAX];
-	char* res = realpath(map->l_name, buf);
-	if (res) {
+	char *res = realpath(map->l_name, buf);
+	if (res)
+	{
 		std::string libraryPath(buf);
 		size_t pos = libraryPath.find(".so.");
-		if (pos != std::string::npos) {
+		if (pos != std::string::npos)
+		{
 			version = libraryPath.substr(pos + 4); // Assuming version starts after ".so."
 		}
 	}
@@ -179,24 +182,12 @@ std::string GetFileVersion(void* handle)
 
 int main()
 {
-	uint16_t startup;
-#ifdef _WIN32
-	hs_vizionsdk = LoadLibrary(L"VizionSDK.dll");
-	if (NULL == hs_vizionsdk)
-	{
-		printf("Load VizionSDK.dll Fail\n");
-		return -1;
-	}
-#else
-	std::string libname("libVizionSDK.so");
-	hs_vizionsdk = dlopen(libname.c_str(), RTLD_LAZY);
-	const char* error = dlerror();
-	if (error != nullptr)
-	{
-		std::cout << "dlopen error: " << error << std::endl;
-		return -1;
-	}
-#endif
+	uint16_t index;
+
+	hs_vizionsdk = loadLibrary();
+
+	if (hs_vizionsdk == nullptr)
+		std::cout << "Load VizionSDK Fail" << std::endl;
 
 	if (LoadVizionFunc() < 0)
 		return -1;
@@ -210,7 +201,8 @@ int main()
 	}
 #else
 	std::string version = GetFileVersion(hs_vizionsdk);
-	if (!version.empty()) {
+	if (!version.empty())
+	{
 		std::cout << "VizionSDK Version: " << version << std::endl;
 	}
 #endif
@@ -231,14 +223,14 @@ int main()
 
 	int i = 0;
 	std::cout << "Select Camera:" << std::endl;
-	for (const auto& device : devlist)
-		_STDOUT << "[" << i++ << "] " << "Device Name: " << device.deviceName \
-		<< ", Hardware ID: " << device.hardwareId << \
-		", Serial Number: " << device.serialNumber.c_str() << std::endl;
+	for (const auto &device : devlist)
+		_STDOUT << "[" << i++ << "] "
+				<< "Device Name: " << device.deviceName
+				<< ", Serial Number: " << device.serialNumber.c_str() << std::endl;
 
-	std::cin >> startup;
+	std::cin >> index;
 
-	if (VcOpen(vzcam, startup) != 0)
+	if (VcOpen(vzcam, index) < 0)
 	{
 		std::cout << "Open Fail" << std::endl;
 		return -1;
@@ -319,7 +311,7 @@ int main()
 	img_arr = new uint8_t[g_width * g_height * 3];
 	while (retry_count < max_retry)
 	{
-		
+
 		ret = VcGetRawImageCapture(vzcam, img_arr, &size, timeout);
 
 		if (ret == 0)
