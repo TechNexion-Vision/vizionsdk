@@ -47,6 +47,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 ## Supported Platforms
 - Windows 10/11
 - Ubuntu
+- NXP i.MX93
 - NXP i.MX8MP
 - NXP i.MX8MM
 - Jetson Nano
@@ -68,7 +69,7 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 - [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/installation#linux)
 
 #### Embedded Platforms
-- [NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/installation#nxpimx8mp-nxpimx8mm)
+- [NXP-iMX93, NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/installation#nxpimx)
 - [NVIDIA-Jetpack5](https://developer.technexion.com/docs/installation#nvidiajetpack-5x)
 - [NVIDIA-Jetpack4](https://developer.technexion.com/docs/installation#nvidiajetpack-4x)
 
