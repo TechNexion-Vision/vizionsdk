@@ -60,18 +60,18 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 ![output](./doc/resources/VizionViewer.png)
 
 ### VizionViewer™ Usage Guide
-[VizionViewer™ Usage Guide](https://developer.technexion.com/docs/usage-guide)
+[VizionViewer™ Usage Guide](https://developer.technexion.com/docs/vizionviewer-usage-guide)
 
 ### How to Install VizionViewer™
 
 #### X86 Platforms
-- [Windows 10 and 11 (64-bit)](https://developer.technexion.com/docs/installation#windows)
-- [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/installation#linux)
+- [Windows 10 and 11 (64-bit)](https://developer.technexion.com/docs/vizionviewer-installation#windows)
+- [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/vizionviewer-installation#linux)
 
 #### Embedded Platforms
-- [NXP-iMX93, NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/installation#nxpimx)
-- [NVIDIA-Jetpack5](https://developer.technexion.com/docs/installation#nvidiajetpack-5x)
-- [NVIDIA-Jetpack4](https://developer.technexion.com/docs/installation#nvidiajetpack-4x)
+- [NXP-iMX93, NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/vizionviewer-installation#nxpimx)
+- [NVIDIA-Jetpack5](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-5x)
+- [NVIDIA-Jetpack4](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-4x)
 
 ## Documents
 - Github Pages：https://github.com/TechNexion
