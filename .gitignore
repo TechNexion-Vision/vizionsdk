@@ -1,0 +1,49 @@
+# Build directories
+/build/
+/bin/
+/obj/
+
+# CMake build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Visual Studio files
+*.VC.db
+*.VC.opendb
+*.sdf
+*.vcxproj*
+*.vcproj*
+*.user
+*.log
+
+# Compiled source files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.pyo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other
+*.swp
+*.bak
+*.tmp
+*.log
+*.dmp
+*.stackdump
+*.old
+*.out
+*.diff
+*.patch
+
+# Ignore directories
+/.vscode/
+.idea/
