@@ -17,6 +17,27 @@ Before building and running this project, ensure you have the following installe
     sudo apt update
     sudo apt install cmake
     ```
+  - If sudo apt install cmake is not available. You can manually download and install [CMake](https://cmake.org/download/) from the official website:
+
+    If you're working with NXP, Nvidia, or TI platforms  look for the Linux aarch64 binary distribution. Download the appropriate tar.gz file for your platform.
+    1. Extract the downloaded file:
+    ```
+    tar -zxvf cmake-[version]-linux-aarch64.tar.gz
+    ```
+    2. Move the extracted directory:
+       - Move the extracted files to a directory like /opt for easier management:
+         ```
+         sudo mv cmake-[version]-linux-aarch64 /opt/cmake
+         ```
+    3. Update the PATH environment variable:
+       - Add CMake to your system PATH by modifying your ~/.bashrc or ~/.profile file:
+         ```
+          export PATH=/opt/cmake/bin:$PATH
+         ```
+        - Save the file and reload your profile with
+          ```
+           source ~/.profile
+          ```
 ### C++ compiler (supporting C++11 standard)
 
 - **Windows**: 
@@ -52,7 +73,6 @@ Before building and running this project, ensure you have the following installe
 4. Generate build files using CMake (replace your_platform with Windows, Ubuntu, IMX, or Nvidia):
   ```
   cmake -DPLATFORM=your_platform ..
-
   ```
 5. Build the project using the generated build files: `make`
 
