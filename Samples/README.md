@@ -42,6 +42,7 @@ Before building and running this project, ensure you have the following installe
 
 - **Windows**: 
   - For Windows, you might need to install a C++ compiler separately. You can use Microsoft Visual Studio, which includes the MSVC compiler.
+    - When installing Visual Studio, make sure to select the "Desktop development with C++" workload during the installation process. This will include the necessary C++ compiler, nmake, and other essential tools for C++ development on Windows. 
   - Alternatively, you can use MinGW, a port of the GNU Compiler Collection (GCC), which provides a C++ compiler for Windows.
 
 - **Linux**: 
@@ -61,7 +62,6 @@ Before building and running this project, ensure you have the following installe
 4. Generate build files using CMake (replace your_platform with Windows, Ubuntu, IMX, or Nvidia):
   ```
   cmake -DPLATFORM=your_platform ..
-
   ```
 5. Build the project using the generated build files: `cmake --build . --config Release`
 
