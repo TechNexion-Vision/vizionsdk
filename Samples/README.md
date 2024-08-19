@@ -59,9 +59,9 @@ Before building and running this project, ensure you have the following installe
 1. Open Command Prompt or PowerShell.
 2. Navigate to the Samples directory of the project:
 3. Create a build directory: `mkdir build && cd build`
-4. Generate build files using CMake (replace your_platform with Windows, Ubuntu, IMX, or Nvidia):
+4. Generate build files using CMake (replace your_platform with **Windows**, **Ubuntu**, **IMX**, or **Nvidia**):
   ```
-  cmake -DPLATFORM=your_platform ..
+  cmake -DPLATFORM=[your_platform] ..
   ```
 5. Build the project using the generated build files: `cmake --build . --config Release`
 
@@ -70,9 +70,9 @@ Before building and running this project, ensure you have the following installe
 1. Open Terminal.
 2. Navigate to the Samples directory of the project:
 3. Create a build directory: `mkdir build && cd build`
-4. Generate build files using CMake (replace your_platform with Windows, Ubuntu, IMX, or Nvidia):
+4. Generate build files using CMake (replace your_platform with **Windows**, **Ubuntu**, **IMX**, or **Nvidia**):
   ```
-  cmake -DPLATFORM=your_platform ..
+  cmake -DPLATFORM=[your_platform] ..
   ```
 5. Build the project using the generated build files: `make`
 
