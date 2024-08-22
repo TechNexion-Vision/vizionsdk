@@ -224,9 +224,7 @@ int main()
 	int i = 0;
 	std::cout << "Select Camera:" << std::endl;
 	for (const auto &device : devlist)
-		_STDOUT << "[" << i++ << "] "
-				<< "Device Name: " << device.deviceName
-				<< ", Serial Number: " << device.serialNumber.c_str() << std::endl;
+		_STDOUT << "[" << i++ << "] " << "Device Name: " << device.deviceName << std::endl;
 
 	std::cin >> index;
 
