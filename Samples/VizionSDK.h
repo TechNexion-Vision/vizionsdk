@@ -12,6 +12,7 @@ enum VZ_IMAGE_FORMAT
 enum class AE_MODE_STATUS
 {
 	MANUAL_EXP = 0,
+	AUTO_GAIN = 0x9,
 	AUTO_EXP = 0xC,
 };
 
