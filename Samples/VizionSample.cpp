@@ -118,6 +118,25 @@ void SaveImageFile(const char *filename, const unsigned char *data, int size)
 	std::cout << "Save Image Successfully!" << std::endl;
 }
 
+std::string GetFormatName(VZ_IMAGE_FORMAT format)
+{
+	switch (format)
+	{
+	case VZ_IMAGE_FORMAT::NONE:
+		return "None";
+	case VZ_IMAGE_FORMAT::YUY2:
+		return "YUY2";
+	case VZ_IMAGE_FORMAT::UYVY:
+		return "UYVY";
+	case VZ_IMAGE_FORMAT::NV12:
+		return "NV12";
+	case VZ_IMAGE_FORMAT::MJPG:
+		return "MJPG";
+	default:
+		return "Unknown Format";
+	}
+}
+
 #ifdef _WIN32
 std::string GetFileVersion(const std::string filePath)
 {
@@ -284,7 +303,8 @@ int main()
 	VcGetCaptureFormatList(vzcam, vzformatlist);
 
 	for (int i = 0; i < vzformatlist.size(); i++)
-		printf("[%d] Width=%d, Height=%d, Framerate=%d\n", i, vzformatlist[i].width, vzformatlist[i].height, vzformatlist[i].framerate);
+		if (vzformatlist[i].format != VZ_IMAGE_FORMAT::NONE)
+			printf("[%d] Width=%d, Height=%d, Framerate=%d, Format=%s\n", i, vzformatlist[i].width, vzformatlist[i].height, vzformatlist[i].framerate, GetFormatName(vzformatlist[i].format).c_str());
 
 	std::cout << "Select a Capture Format..Please enter the index of Format." << std::endl;
 
