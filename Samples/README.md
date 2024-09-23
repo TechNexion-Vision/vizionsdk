@@ -46,12 +46,15 @@ Before building and running this project, ensure you have the following installe
   - Alternatively, you can use MinGW, a port of the GNU Compiler Collection (GCC), which provides a C++ compiler for Windows.
 
 - **Linux**: 
-  - Most Linux distributions come with a C++ compiler pre-installed. However, if it's not available, you can install it using your package manager.
-  - On Debian-based systems (e.g., Ubuntu), you can install the GNU Compiler Collection (GCC) using apt:
+    - Most Linux distributions come with a C++ compiler pre-installed. However, if it's not available, you can install it using your package manager.
+  On Debian-based systems (e.g., Ubuntu), you can install the GNU Compiler Collection (GCC) using apt:
     ```
     sudo apt update
     sudo apt install build-essential
     ```
+   - Embedded systems:
+    Embedded systems typically do not require a compiler. Development is done using cross-compilation on a host machine, and the resulting binaries are deployed to the embedded device.
+   
 ## Building
 
 ### Windows
