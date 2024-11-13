@@ -53,6 +53,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - Jetson Nano
 - Jetson Orin Nano
 - TI TDA4VM
+- UP Squared Pro 7000
   
 ## VizionViewer™
 
@@ -68,6 +69,11 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 #### X86 Platforms
 - [Windows 10 and 11 (64-bit)](https://developer.technexion.com/docs/vizionviewer-installation#windows)
 - [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/vizionviewer-installation#linux)
+  - Compatible with UP Squared Pro 7000
+  - **Note**: When using UP Squared Pro 7000, please add Gstreamer library to environment:
+  ```bash
+  export GST_PLUGIN_PATH=/usr/lib/gstreamer-1.0
+  ```
 
 #### Embedded Platforms
 - [NXP-iMX93, NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/vizionviewer-installation#nxpimx)
