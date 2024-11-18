@@ -77,7 +77,7 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 
 #### Embedded Platforms
 - [NXP-iMX93, NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/vizionviewer-installation#nxpimx)
-- [NVIDIA-Jetpack5](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-5x)
+- [NVIDIA-Jetpack5 and Later](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-5x-and-later)
 - [NVIDIA-Jetpack4](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-4x)
 - [TI-TDA4VM](https://developer.technexion.com/docs/vizionviewer-installation#ti)
   
