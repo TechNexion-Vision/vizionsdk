@@ -2,37 +2,30 @@
 VizionSDK is a software development kit designed for Windows and Linux platforms, supporting Technexion AR Series Cameras on various platforms like Windows 10/11, Ubuntu, Yocto, NXP-imx8mp, and Nvidia Jetson. It empowers companies and individuals to easily control these cameras and develop custom applications for diverse purposes.
 
 ## What is included in the repository
-- library : VizionSDK core library files.
-- SDK : VizionSDK files for different platforms
 - Samples : C/C++ samples project source code.
-- doc : API reference documentation and sample documentation.
+
 ## Supported TechNexion Cameras
 
 ### MIPI Cameras
 - TEVS-AR0144
+- TEVS-AR0145
 - TEVS-AR0234
 - TEVS-AR0521
 - TEVS-AR0522
 - TEVS-AR0821
 - TEVS-AR0822
 - TEVS-AR1335
-- TEVI-AR0144 (NRND)
-- TEVI-AR0234 (NRND)
-- TEVI-AR0521 (NRND)
-- TEVI-AR0522 (NRND)
-- TEVI-AR0821 (NRND)
-- TEVI-AR0822 (NRND)
-- TEVI-AR1335 (NRND)
 
 ### FPD-LinkIII Cameras
 
-- VLS-AR0144
-- VLS-AR0234
-- VLS-AR0521
-- VLS-AR0522
-- VLS-AR0821
-- VLS-AR0822
-- VLS-AR1335
+- VLS3-AR0144
+- VLS3-AR0145
+- VLS3-AR0234
+- VLS3-AR0521
+- VLS3-AR0522
+- VLS3-AR0821
+- VLS3-AR0822
+- VLS3-AR1335
 
 ### UVC Cameras
 
@@ -48,11 +41,10 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - Windows 10/11
 - Ubuntu
 - NXP i.MX93
+- NXP i.MX95
 - NXP i.MX8MP
 - NXP i.MX8MM
-- Jetson Nano
-- Jetson Orin Nano
-- TI TDA4VM
+- Jetson Orin Nano (JetPack 5.x/6.x)
 - UP Squared Pro 7000
   
 ## VizionViewer™
