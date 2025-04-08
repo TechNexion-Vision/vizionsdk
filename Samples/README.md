@@ -62,20 +62,60 @@ Before building and running this project, ensure you have the following installe
 1. Open Command Prompt or PowerShell.
 2. Navigate to the Samples directory of the project:
 3. Create a build directory: `mkdir build && cd build`
-4. Generate build files using CMake (replace your_platform with **Windows**, **Ubuntu**, **IMX**, **TI**, or **Nvidia**):
+4. Generate build files using CMake:
   ```
-  cmake -DPLATFORM=[your_platform] ..
+  cmake ..
   ```
 5. Build the project using the generated build files: `cmake --build . --config Release`
 
 ### Linux
 
+### CMakeLists.txt Configuration
+
+In this project, we use online installation for example. If you download VizionSDK by offline installation, please make sure the CMakeLists.txt is correct.
+
+- **Online Installation** (default)
+```cmake
+
+# Find vizionsdk package
+find_package(vizionsdk REQUIRED)
+
+# Include directories
+target_include_directories(VizionSample
+  PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
+
+# Link libraries
+target_link_libraries(VizionSample
+  PRIVATE
+  vizionsdk::VizionSDK
+)
+```
+
+- **Offline Installation**
+```cmake
+# Set path to the SDK library directory
+# NOTE: Update this path to match your SDK location
+target_link_directories(VizionSample
+  PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../Downloads/libVizionSDK-amd64-{version}/lib
+)
+
+# Link libraries
+target_link_libraries(VizionSample
+  PRIVATE
+  VizionSDK
+)
+```
+### Building with cmake
+
 1. Open Terminal.
 2. Navigate to the Samples directory of the project:
 3. Create a build directory: `mkdir build && cd build`
-4. Generate build files using CMake (replace your_platform with **Windows**, **Ubuntu**, **IMX**, **TI**, or **Nvidia**):
+4. Generate build files using CMake:
   ```
-  cmake -DPLATFORM=[your_platform] ..
+  cmake ..
   ```
 5. Build the project using the generated build files: `make`
 
@@ -84,10 +124,8 @@ Before building and running this project, ensure you have the following installe
 ### Windows
 
 - After successful building, you will find the executable `VizionSample.exe` in the `build` directory. You can run it from the command line or by double-clicking on it in the File Explorer.
-- Ensure that you also copy the VizionSDK.dll file next to the executable VizionSample.exe. This DLL file is required for the proper execution of the application.
 
 ### Linux
 
-- After successful building, you will find the executable VizionSample in the build directory. Before running it, navigate to the SDK directory in the terminal using cd path_to_sdk, then execute sudo cp VizionSDK.so* /usr/lib/ to copy the necessary SDK files to the system's library directory.
 - After successful building, you will find the executable `VizionSample` in the `build` directory. You can run it from the terminal by executing `./VizionSample`.
 
