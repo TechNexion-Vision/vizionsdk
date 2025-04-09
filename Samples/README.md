@@ -72,9 +72,9 @@ Before building and running this project, ensure you have the following installe
 
 ### CMakeLists.txt Configuration
 
-In this project, we use online installation for example. If you download VizionSDK by offline installation, please make sure the CMakeLists.txt is correct.
+In this project, we use library from the installation way for example. If you like to use VizionSDK in the local folder( ../Downloads/libVizionSDK-{os}-{version}/lib), please make sure the CMakeLists.txt is correct.
 
-- **Online Installation** (default)
+- **Link the Installation library** (default)
 ```cmake
 
 # Find vizionsdk package
@@ -93,7 +93,7 @@ target_link_libraries(VizionSample
 )
 ```
 
-- **Offline Installation**
+- **Link the Local library**
 ```cmake
 # Set path to the SDK library directory
 # NOTE: Update this path to match your SDK location
