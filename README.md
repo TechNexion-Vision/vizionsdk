@@ -3,6 +3,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 
 ## What is included in the repository
 - Samples : C/C++ samples project source code.
+- config : A config file of TechNexion Camera series for VizionSDK to recognize the devices.
 
 ## Supported TechNexion Cameras
 
