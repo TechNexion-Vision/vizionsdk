@@ -72,9 +72,10 @@ Before building and running this project, ensure you have the following installe
 
 ### CMakeLists.txt Configuration
 
-In this project, we use library from the installation way for example. If you like to use VizionSDK in the local folder( ../Downloads/libVizionSDK-{os}-{version}/lib), please make sure the CMakeLists.txt is correct.
+In this project, we use library from the installation way for example. If you like to use VizionSDK in the local folder( ../Downloads/vizionsdk-{version}-{os}/lib), please make sure the CMakeLists.txt is correct.
 
-- **Link the Installation library** (default)
+- **Link the Installation library** (default)  
+Linked the library which is installed by **.exe**, **.deb** or using **apt install**
 ```cmake
 
 # Find vizionsdk package
@@ -99,7 +100,7 @@ target_link_libraries(VizionSample
 # NOTE: Update this path to match your SDK location
 target_link_directories(VizionSample
   PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../Downloads/libVizionSDK-amd64-{version}/lib
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../Downloads/vizionsdk-{version}-{os}/lib
 )
 
 # Link libraries
