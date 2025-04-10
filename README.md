@@ -44,6 +44,7 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - NXP i.MX93
 - NXP i.MX95
 - NXP i.MX8MP
+- NXP i.MX8MQ
 - NXP i.MX8MM
 - Jetson Orin Nano (JetPack 5.x/6.x)
 - UP Squared Pro 7000
@@ -59,21 +60,22 @@ VizionViewer™ is a cross-platform camera software for video streaming and imag
 
 ### How to Install VizionViewer™
 
-#### X86 Platforms
-- [Windows 10 and 11 (64-bit)](https://developer.technexion.com/docs/vizionviewer-installation#windows)
-- [Linux (Debian): Ubuntu Desktop 20.04 and 22.04 (64-bit)](https://developer.technexion.com/docs/vizionviewer-installation#linux)
-  - Compatible with UP Squared Pro 7000
-  - **Note**: When using UP Squared Pro 7000, please add Gstreamer library to environment:
-  ```bash
-  export GST_PLUGIN_PATH=/usr/lib/gstreamer-1.0
-  ```
+#### [Windows x64](https://developer.technexion.com/docs/vizionviewer-installation#windowsx64)
+- Windows 10 and 11 (64-bit)
+#### [Linux x64](https://developer.technexion.com/docs/vizionviewer-installation#linuxx64)
+- Ubuntu Desktop 20.04 and 22.04 (64-bit)
+- UP Squared Pro 7000
+> **Note**: When using UP Squared Pro 7000, please add Gstreamer library to environment:
+```bash
+export GST_PLUGIN_PATH=/usr/lib/gstreamer-1.0
+```
+#### [Linux ARM64](https://developer.technexion.com/docs/vizionviewer-installation#linuxarm64)
+- NVIDIA Jetson (JetPack 6.x or later)
+- NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
+- TI-TDA4VM
+> ⚠️ Platforms with older toolchains (e.g., GCC < 11 or glibc < 2.34) are not supported in the current release. 
+Please use [legacy versions of VizionViewer](https://download.technexion.com/vizionviewer/archived/) if needed.
 
-#### Embedded Platforms
-- [NXP-iMX93, NXP-iMX8MP, NXP-iMX8MM (GCC >= 7.5)](https://developer.technexion.com/docs/vizionviewer-installation#nxpimx)
-- [NVIDIA-Jetpack5 and Later](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-5x-and-later)
-- [NVIDIA-Jetpack4](https://developer.technexion.com/docs/vizionviewer-installation#nvidiajetpack-4x)
-- [TI-TDA4VM](https://developer.technexion.com/docs/vizionviewer-installation#ti)
-  
 ## Documents
 - Github Pages：https://github.com/TechNexion
 - Overview Document：https://developer.technexion.com/docs/product-category-overview
