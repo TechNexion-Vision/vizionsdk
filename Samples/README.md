@@ -72,7 +72,7 @@ Before building and running this project, ensure you have the following installe
 
 ### CMakeLists.txt Configuration
 
-In this project, we use library from the installation way for example. If you like to use VizionSDK in the local folder( ../Downloads/vizionsdk-{version}-{os}/lib), please make sure the CMakeLists.txt is correct.
+In this project, we use library from the installation way for example. If you like to use VizionSDK in the local folder( ../Downloads/vizionsdk-{version}-{arch}/lib), please make sure the CMakeLists.txt is correct.
 
 - **Link the Installation library** (default)  
 Linked the library which is installed by **.exe**, **.deb** or using **apt install**
