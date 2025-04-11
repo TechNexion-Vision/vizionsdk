@@ -100,7 +100,7 @@ target_link_libraries(VizionSample
 # NOTE: Update this path to match your SDK location
 target_link_directories(VizionSample
   PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../Downloads/vizionsdk-{version}-{os}/lib
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../Downloads/vizionsdk-{version}-{arch}/lib
 )
 
 # Link libraries
