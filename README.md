@@ -79,7 +79,7 @@ Please use [legacy versions of VizionViewer](https://download.technexion.com/viz
 ## Documents
 - Github Pages：https://github.com/TechNexion
 - Overview Document：https://developer.technexion.com/docs/product-category-overview
-- API User Guide: https://developer.technexion.com/docs/vizionsdkoverview
+- API User Guide: https://developer.technexion.com/docs/vizionsdk-overview
 
 ## Related links
 - [Technexion Main Page](https://www.technexion.com/)
