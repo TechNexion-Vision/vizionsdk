@@ -68,8 +68,7 @@ int main() {
         }
         
         std::cout << "Set " << propertyNames[i] << " to " << targetValue 
-                  << ", current value: " << currentValue 
-                  << " (auto mode: " << (flag ? "on" : "off") << ")" << std::endl;
+                  << ", current value: " << currentValue << std::endl;
     }
     
     VxClose(cam);
