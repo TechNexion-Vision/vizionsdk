@@ -73,8 +73,6 @@ export GST_PLUGIN_PATH=/usr/lib/gstreamer-1.0
 - NVIDIA Jetson (JetPack 6.x or later)
 - NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
 - TI-TDA4VM
-> ⚠️ Platforms with older toolchains (e.g., GCC < 11 or glibc < 2.34) are not supported in the current release. 
-Please use [legacy versions of VizionViewer](https://download.technexion.com/vizionviewer/archived/) if needed.
 
 ## Documents
 - Github Pages：https://github.com/TechNexion
