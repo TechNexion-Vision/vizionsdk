@@ -5,6 +5,12 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - Samples : C/C++ samples project source code.
 - config : A config file of TechNexion Camera series for VizionSDK to recognize the devices.
 
+## Documentation
+- [Install VizionSDK-C++](https://developer.technexion.com/docs/vizionsdk-cpp-installation)
+- [Install VizionSDK-Python](https://developer.technexion.com/docs/vizionsdk-python-installation)
+- [VizionSDK Documentation](https://developer.technexion.com/docs/vizionsdk-overview)
+- [VizionSDK API User Guide](https://developer.technexion.com/docs/vizionsdk-api-log-file-setting)
+
 ## Supported TechNexion Cameras
 
 | Sensor | MIPI           | FPD-LinkIII      | UVC            |
@@ -46,13 +52,6 @@ Two versions are available:
 
 ![output](./doc/resources/VizionViewer.png)
 
-
-## Documents
-- Github Pages: https://github.com/TechNexion
-- VizionSDK Overview: https://developer.technexion.com/docs/vizionsdk-overview
-- VizionSDK Installation: https://developer.technexion.com/docs/vizionsdk-cpp-installation
-- VizionSDK API User Guide: https://developer.technexion.com/docs/vizionsdk-api-log-file-setting
-- VizionViewer Overview: https://developer.technexion.com/docs/vizionviewer-overview
-
 ## Related links
-- [Technexion Main Page](https://www.technexion.com/)
+- [TechNexion Main Page](https://www.technexion.com/)
+- [TechNexion Github](https://github.com/TechNexion)
