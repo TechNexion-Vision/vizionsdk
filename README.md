@@ -29,6 +29,16 @@ VizionSDK is a software development kit designed for Windows and Linux platforms
 - NVIDIA Jetson (JetPack 5 or later)
 - NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
 - TI-TDA4VM
+
+## vizion-ctl
+
+[vizion-ctl](https://developer.technexion.com/docs/vizion-ctl) is a cross-platform command-line tool for controlling TechNexion cameras.
+
+It supports camera parameter control, information retrieval, and firmware updates via terminal commands.
+
+Two versions are available:
+- **vizion-ctl** – uses the C++ `VizionSDK`
+- **pyvizion-ctl** – uses the Python `pyvizionsdk`(no firmware update support)
   
 ## VizionViewer™
 
