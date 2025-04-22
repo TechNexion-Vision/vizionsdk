@@ -76,8 +76,8 @@ export GST_PLUGIN_PATH=/usr/lib/gstreamer-1.0
 
 ## Documents
 - Github Pages：https://github.com/TechNexion
-- Overview Document：https://developer.technexion.com/docs/product-category-overview
-- API User Guide: https://developer.technexion.com/docs/vizionsdk-overview
+- Overview Document：https://developer.technexion.com/docs/vizionsdk-overview
+- API User Guide: https://developer.technexion.com/docs/vizionsdk-api-log-file-setting
 
 ## Related links
 - [Technexion Main Page](https://www.technexion.com/)
