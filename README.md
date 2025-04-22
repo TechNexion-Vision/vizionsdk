@@ -1,9 +1,9 @@
 # VizionSDK
-VizionSDK is a software development kit designed for Windows and Linux platforms, supporting Technexion AR Series Cameras on various platforms like Windows 10/11, Ubuntu, Yocto, NXP-i.MX, and NVIDIA Jetson. It empowers companies and individuals to easily control these cameras and develop custom applications for diverse purposes.
+VizionSDK is a cross-platform software development kit (SDK) for Windows and Linux, designed to support TechNexion AR Series Cameras across platforms such as Windows 10/11, Ubuntu, Yocto, NXP i.MX, and NVIDIA Jetson. It enables developers and companies to easily integrate, control, and build custom applications using these cameras.
 
 ## What is included in the repository
-- Samples : C/C++ samples project source code.
-- config : A config file of TechNexion Camera series for VizionSDK to recognize the devices.
+- `samples/` : C++ samples project source code.
+- `config/` : A config file of TechNexion Camera series for VizionSDK to recognize the devices.
 
 ## Documentation
 - [Install VizionSDK-C++](https://developer.technexion.com/docs/vizionsdk-cpp-installation)
@@ -44,13 +44,14 @@ It supports camera parameter control, information retrieval, and firmware update
 
 Two versions are available:
 - **vizion-ctl** – uses the C++ `VizionSDK`
-- **pyvizion-ctl** – uses the Python `pyvizionsdk`(no firmware update support)
-  
+- **pyvizion-ctl** – uses the Python `pyvizionsdk`
+##### (Note: pyvizion-ctl currently does not support firmware updates.)
+
 ## VizionViewer™
 
 [VizionViewer™](https://developer.technexion.com/docs/vizionviewer-overview) is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
 
-![output](./doc/resources/VizionViewer.png)
+![VizionViewer GUI interface](./doc/resources/VizionViewer.png)
 
 ## Related links
 - [TechNexion Main Page](https://www.technexion.com/)
