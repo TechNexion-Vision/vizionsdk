@@ -18,6 +18,11 @@ Before building, ensure you have:
 2.  **C++ Compiler (Supporting C++11):**
     * A C++ compiler compatible with the C++11 standard is needed (e.g., GCC, Clang, MSVC). Install one suitable for your platform if necessary (e.g., `build-essential` on Ubuntu/Debian, Visual Studio C++ workload on Windows).
 
+If you're using Ubuntu, install with: 
+```
+sudo apt install cmake build-essential
+```
+
 ---
 
 ## Building
