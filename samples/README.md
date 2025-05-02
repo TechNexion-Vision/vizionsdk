@@ -58,85 +58,100 @@ Before building and running these projects, ensure you have the following instal
     ```
    - Embedded systems:
     Embedded systems typically do not require a compiler. Development is done using cross-compilation on a host machine, and the resulting binaries are deployed to the embedded device.
-   
+
+---
+
 ## Building
 
-### Windows
+For each sample (Windows/Linux):
 
-For each sample:
-1. Open Command Prompt or PowerShell.
-2. Navigate to the sample directory (e.g., sample1-hello_vizionsdk)
-3. Create a build directory: `mkdir build && cd build`
+1. Open the terminal/command prompt:
+   - Windows: Command Prompt or PowerShell
+   - Linux: Your preferred terminal
+
+2. Navigate to the sample directory:  
+   e.g., `cd sample1-hello_vizionsdk`
+
+3. Create a build directory:
+   ```bash
+   mkdir build && cd build
+   ```
+
 4. Generate build files using CMake:
-  ```
-  cmake ..
-  ```
-5. Build the project using the generated build files: `cmake --build . --config Release`
+   ```bash
+   cmake ..
+   ```
 
-### Linux
+5. Build the project:
+   ```bash
+   cmake --build .
+   ```
 
-### CMakeLists.txt Configuration
+---
 
-In this project, we use library from the installation way for example. If you like to use VizionSDK in the local folder( ../Downloads/vizionsdk-{version}-{arch}/lib), please make sure the CMakeLists.txt is correct.
+## Configuring CMakeLists.txt
 
-- **Link the Installation library** (default)  
-Linked the library which is installed by **.exe**, **.deb** or using **apt install**
+### When Using System-Installed SDK (.exe or .deb Installed)
+
+If you've installed VizionSDK using the installer (e.g., .exe on Windows or .deb on Linux), you can simply use `find_package`:
+
 ```cmake
-
-# Find vizionsdk package
+# Find the SDK package
 find_package(vizionsdk REQUIRED)
 
-# Include directories
-target_include_directories(VizionSample
-  PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/src
-)
-
 # Link libraries
-target_link_libraries(VizionSample
+target_link_libraries(${PROJECT_NAME}
   PRIVATE
   vizionsdk::VizionSDK
 )
 ```
 
-- **Link the Local library**
+### Using Extracted SDK Archive
+
+If you're using the SDK directly from the extracted folder (without system installation), update the path manually:
+
 ```cmake
-# Set path to the SDK library directory
-# NOTE: Update this path to match your SDK location
-target_link_directories(VizionSample
+# Set include and lib paths
+# NOTE: Adjust the path to match your actual SDK location
+target_include_directories(${PROJECT_NAME}
   PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../Downloads/vizionsdk-{version}-{arch}/lib
+  <YOUR_SDK_PATH>/include/vizionsdk
+)
+
+target_link_directories(${PROJECT_NAME}
+  PRIVATE
+  <YOUR_SDK_PATH>/lib
 )
 
 # Link libraries
-target_link_libraries(VizionSample
+target_link_libraries(${PROJECT_NAME}
   PRIVATE
   VizionSDK
 )
 ```
-### Building with cmake
 
-For each sample:
-1. Open Terminal.
-2. Navigate to the sample directory (e.g., sample1-hello_vizionsdk)
-3. Create a build directory: `mkdir build && cd build`
-4. Generate build files using CMake:
-  ```
-  cmake ..
-  ```
-5. Build the project using the generated build files: `make`
+> 📌 Replace `<YOUR_SDK_PATH>` with the actual path to your extracted SDK folder.
+
+---
 
 ## Running
 
-### Windows
+After building, you'll find the executable in the `build` directory.  
+Run it from the command line or terminal:
 
-For each sample:
-- After successful building, you will find the executable in the `build` directory. You can run it from the command line or by double-clicking on it in the File Explorer.
+- **Windows**:  
+  ```bash
+  .\hello_vizionsdk.exe
+  ```
 
-### Linux
+- **Linux**:  
+  ```bash
+  ./hello_vizionsdk
+  ```
 
-For each sample:
-- After successful building, you will find the executable in the `build` directory. You can run it from the terminal by executing `./VizionSample`.
+> 🔁 Replace `hello_vizionsdk` with `camera_capture` or `camera_control` depending on the sample you're building.
+
+---
 
 ## Sample Descriptions
 
