@@ -6,58 +6,17 @@ This repository contains three sample projects demonstrating how to use the Vizi
 2. **Camera Capture** - Basic camera operations and image capture
 3. **Camera Control** - Advanced camera control features
 
-## Prerequisites
+### Prerequisites
 
-Before building and running these projects, ensure you have the following installed:
+Before building, ensure you have:
 
-### CMake (version 3.0 or newer)
-- **Windows**: 
-  - You can download the latest CMake installer from the [official CMake website](https://cmake.org/download/) and follow the installation instructions provided.
-  - Ensure that CMake is added to your system PATH during installation to enable command-line usage.
+1.  **CMake (Version 3.0 or newer):**
+    * CMake is required to configure the build.
+    * If you don't have it, download and install it from the [official CMake website](https://cmake.org/download/).
+    * Make sure the `cmake` executable is in your system's PATH. You can verify by running `cmake --version` in your terminal.
 
-- **Linux**: 
-  - On Debian-based systems (e.g., Ubuntu), you can install CMake using apt:
-    ```
-    sudo apt update
-    sudo apt install cmake
-    ```
-  - If sudo apt install cmake is not available. You can manually download and install [CMake](https://cmake.org/download/) from the official website:
-
-    If you're working with NXP, Nvidia, or TI platforms  look for the Linux aarch64 binary distribution. Download the appropriate tar.gz file for your platform.
-    1. Extract the downloaded file:
-    ```
-    tar -zxvf cmake-[version]-linux-aarch64.tar.gz
-    ```
-    2. Move the extracted directory:
-       - Move the extracted files to a directory like /opt for easier management:
-         ```
-         sudo mv cmake-[version]-linux-aarch64 /opt/cmake
-         ```
-    3. Update the PATH environment variable:
-       - Add CMake to your system PATH by modifying your ~/.bashrc or ~/.profile file:
-         ```
-          export PATH=/opt/cmake/bin:$PATH
-         ```
-        - Save the file and reload your profile with
-          ```
-           source ~/.profile
-          ```
-### C++ compiler (supporting C++11 standard)
-
-- **Windows**: 
-  - For Windows, you might need to install a C++ compiler separately. You can use Microsoft Visual Studio, which includes the MSVC compiler.
-    - When installing Visual Studio, make sure to select the "Desktop development with C++" workload during the installation process. This will include the necessary C++ compiler, nmake, and other essential tools for C++ development on Windows. 
-  - Alternatively, you can use MinGW, a port of the GNU Compiler Collection (GCC), which provides a C++ compiler for Windows.
-
-- **Linux**: 
-    - Most Linux distributions come with a C++ compiler pre-installed. However, if it's not available, you can install it using your package manager.
-  On Debian-based systems (e.g., Ubuntu), you can install the GNU Compiler Collection (GCC) using apt:
-    ```
-    sudo apt update
-    sudo apt install build-essential
-    ```
-   - Embedded systems:
-    Embedded systems typically do not require a compiler. Development is done using cross-compilation on a host machine, and the resulting binaries are deployed to the embedded device.
+2.  **C++ Compiler (Supporting C++11):**
+    * A C++ compiler compatible with the C++11 standard is needed (e.g., GCC, Clang, MSVC). Install one suitable for your platform if necessary (e.g., `build-essential` on Ubuntu/Debian, Visual Studio C++ workload on Windows).
 
 ---
 
