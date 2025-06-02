@@ -32,7 +32,7 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 - Ubuntu Desktop 20.04 and 22.04 (64-bit)
 - UP Squared Pro 7000
 #### [Linux ARM64](https://developer.technexion.com/docs/vizionsdk-cpp-installation#linuxarm64)
-- NVIDIA Jetson (JetPack 5 or later)
+- NVIDIA Jetson (JetPack 6 or later)
 - NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
 - TI-TDA4VM
 
