@@ -1,0 +1,622 @@
+VLS-GM2:
+  sensors:
+    AR0144:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 33333 }
+            - { width: 1280, height: 720, min: 16666, max: 33333 }
+            - { width: 640,  height: 480, min: 16666, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 33333 }
+            - { width: 1280, height: 720, min: 16666, max: 33333 }
+            - { width: 640,  height: 480, min: 16666, max: 33333 }
+    AR0145:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+    AR0234:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1920, height: 1200, min: 8333, max: 33333 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 1920, height: 1200, min: 8333, max: 33333 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+    AR0521:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 8333, max: 66666 }
+            - { width: 2560, height: 1440, min: 8333, max: 66666 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  960, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 8333, max: 33333 }
+            - { width: 2560, height: 1440, min: 8333, max: 33333 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  960, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+    AR0522:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 8333, max: 66666 }
+            - { width: 2560, height: 1440, min: 8333, max: 66666 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  960, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 8333, max: 33333 }
+            - { width: 2560, height: 1440, min: 8333, max: 33333 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  960, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+    AR0821:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 33333 }
+            - { width: 1280, height:  720, min: 16666, max: 33333 }
+            - { width:  640, height:  480, min: 16666, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 33333 }
+            - { width: 1920, height: 1080, min: 16666, max: 33333 }
+            - { width: 1280, height:  720, min: 16666, max: 33333 }
+            - { width:  640, height:  480, min: 16666, max: 33333 }
+    AR0822:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 33333 }
+            - { width: 1280, height:  720, min: 16666, max: 33333 }
+            - { width:  640, height:  480, min: 16666, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 33333 }
+            - { width: 1920, height: 1080, min: 16666, max: 33333 }
+            - { width: 1280, height:  720, min: 16666, max: 33333 }
+            - { width:  640, height:  480, min: 16666, max: 33333 }
+    AR1335:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 4208, height: 3120, min: 8333, max: 66666 }
+            - { width: 3840, height: 2160, min: 8333, max: 66666 }
+            - { width: 2560, height: 1440, min: 8333, max: 66666 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 4208, height: 3120, min: 8333, max: 66666 }
+            - { width: 3840, height: 2160, min: 8333, max: 66666 }
+            - { width: 2560, height: 1440, min: 8333, max: 33333 }
+            - { width: 1920, height: 1080, min: 8333, max: 33333 }
+            - { width: 1280, height:  720, min: 8333, max: 33333 }
+            - { width:  640, height:  480, min: 8333, max: 33333 }
+
+TEVS:
+  sensors:
+    AR0144:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+    AR0145:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+    AR0234:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1920, height: 1200, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1920, height: 1200, min: 10000, max: 66666 }
+            - { width: 1920, height: 1080, min: 10000, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0521:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0522:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0821:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 125000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR0822:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 71428 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR1335:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 4208, height: 3120, min: 90909, max: 200000 }
+            - { width: 3840, height: 2160, min: 66666, max: 100000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 4208, height: 3120, min: 33333, max: 66666 }
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+
+VLS3:
+  sensors:
+    AR0144:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+    AR0145:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+    AR0234:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1920, height: 1200, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1920, height: 1200, min: 10000, max: 66666 }
+            - { width: 1920, height: 1080, min: 10000, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0521:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0522:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0821:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 125000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR0822:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 71428 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR1335:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 4208, height: 3120, min: 90909, max: 200000 }
+            - { width: 3840, height: 2160, min: 66666, max: 100000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 4208, height: 3120, min: 33333, max: 66666 }
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+
+VCS:
+  sensors:
+    AR0144:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+    AR0145:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 8695, max: 33333 }
+            - { width: 1280, height: 720, min: 8695, max: 33333 }
+            - { width: 640,  height: 480, min: 8695, max: 33333 }
+    AR0234:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1920, height: 1200, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1920, height: 1200, min: 10000, max: 66666 }
+            - { width: 1920, height: 1080, min: 10000, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0521:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0522:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0821:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 125000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR0822:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 71428 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR1335:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 4208, height: 3120, min: 90909, max: 200000 }
+            - { width: 3840, height: 2160, min: 66666, max: 100000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 4208, height: 3120, min: 33333, max: 66666 }
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+
+VCI:
+  sensors:
+    AR0144:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1280, height: 800, min: 16666, max: 66666 }
+            - { width: 1280, height: 720, min: 16666, max: 66666 }
+            - { width: 640,  height: 480, min: 16666, max: 66666 }
+    AR0234:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 1920, height: 1200, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 1920, height: 1200, min: 10000, max: 66666 }
+            - { width: 1920, height: 1080, min: 10000, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0521:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0522:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 2592, height: 1944, min: 41666, max: 66666 }
+            - { width: 2560, height: 1440, min: 31250, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 2592, height: 1944, min: 16666, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  960, min: 12500, max: 66666 }
+            - { width: 1280, height:  720, min: 12500, max: 66666 }
+            - { width:  640, height:  480, min: 8333, max: 66666 }
+    AR0821:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 125000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR0822:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 3840, height: 2160, min: 66666, max: 71428 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 16666, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+    AR1335:
+      formats:
+        UYVY:
+          ranges:
+            - { width: 4208, height: 3120, min: 90909, max: 200000 }
+            - { width: 3840, height: 2160, min: 66666, max: 100000 }
+            - { width: 2560, height: 1440, min: 33333, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
+        MJPG:
+          ranges:
+            - { width: 4208, height: 3120, min: 33333, max: 66666 }
+            - { width: 3840, height: 2160, min: 33333, max: 66666 }
+            - { width: 2560, height: 1440, min: 16666, max: 66666 }
+            - { width: 1920, height: 1080, min: 16666, max: 66666 }
+            - { width: 1280, height:  720, min: 8333, max: 66666 }
+            - { width:  640, height:  480, min: 16666, max: 66666 }
