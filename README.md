@@ -51,7 +51,7 @@ Two versions are available:
 
 [VizionViewer™](https://developer.technexion.com/docs/vision-software/vizionviewer/) is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
 
-![VizionViewer GUI interface](./doc/resources/VizionViewer.png)
+![VizionViewer GUI interface](./doc/resources/VizionViewer™-screenshot-2048x1101.webp)
 
 ## Related links
 - [TechNexion Main Page](https://www.technexion.com/)
