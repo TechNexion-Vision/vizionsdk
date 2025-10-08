@@ -94,7 +94,10 @@ target_link_libraries(${PROJECT_NAME}
 )
 ```
 
-> 📌 Replace `<YOUR_SDK_PATH>` with the actual path to your extracted SDK folder.
+> 📌 **Note:**  
+> Replace `<YOUR_SDK_PATH>` with the actual path to your extracted SDK directory.  
+>
+> You can also customize the location of the `VxConfig.conf` and `VxExposure.yaml` files by setting the `VIZIONSDK_CONFIG_PATH` environment variable.
 
 ---
 
