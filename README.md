@@ -39,7 +39,7 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 ## Documentation
 #### Developer Guides
 - [VizionSDK Overview](https://developer.technexion.com/docs/vision-software/vizionsdk/)
-- [VizionSDK API User Guide](https://developer.technexion.com/docs/category/recommended-api-v25041)
+- [VizionSDK API User Guide](https://developer.technexion.com/docs/category/vizionsdk-api)
 
 #### Integration Samples
 - [vizionsdk-opencv](https://github.com/TechNexion-Vision/vizionsdk-opencv) – Example project showing how to integrate VizionSDK with OpenCV.
