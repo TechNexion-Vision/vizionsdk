@@ -5,11 +5,17 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 - `samples/` : C++ samples project source code.
 - `config/` : A config file of TechNexion Camera series for VizionSDK to recognize the devices.
 
-## Documentation
-- [Install VizionSDK-C++](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation)
-- [Install VizionSDK-Python](https://developer.technexion.com/docs/vision-software/vizionsdk/python/pyvizionsdk-installation)
-- [VizionSDK Documentation](https://developer.technexion.com/docs/vision-software/vizionsdk/)
-- [VizionSDK API User Guide](https://developer.technexion.com/docs/category/recommended-api-v25041)
+## Supported Platforms
+
+#### [Windows x64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#windows-x64)
+- Windows 10 and 11 (64-bit)
+#### [Linux x64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#linux-x64)
+- Ubuntu Desktop 20.04 and 22.04 (64-bit)
+- UP Squared Pro 7000
+#### [Linux ARM64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#linux-arm64)
+- NVIDIA Jetson (JetPack 6 or later)
+- NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
+- TI-TDA4VM
 
 ## Supported TechNexion Cameras
 
@@ -24,17 +30,24 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 | AR0822 | ✓ TEVS-AR0822  | ✓ VLS3-AR0822    | ✓ VCI-AR0822   | ✓ VLS-GM2-AR0822 |
 | AR1335 | ✓ TEVS-AR1335  | ✓ VLS3-AR1335    | ✓ VCI-AR1335   | ✓ VLS-GM2-AR1335 |
 
-## Supported Platforms
+## Supported Languages & Wrappers
 
-#### [Windows x64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#windows-x64)
-- Windows 10 and 11 (64-bit)
-#### [Linux x64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#linux-x64)
-- Ubuntu Desktop 20.04 and 22.04 (64-bit)
-- UP Squared Pro 7000
-#### [Linux ARM64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#linux-arm64)
-- NVIDIA Jetson (JetPack 6 or later)
-- NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
-- TI-TDA4VM
+| Language | Installation Guide | Sample Repository | Platform |
+|-----------|--------------------|-------------------|-----------|
+| **C++** | [Install VizionSDK-C++](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation) | [samples (C++)](https://github.com/TechNexion-Vision/vizionsdk/tree/main/samples) | Windows / Linux |
+| **C** | [Install VizionSDK-C](https://developer.technexion.com/docs/vision-software/vizionsdk/c/vizionsdk-c-installation) | [vizionsdk-c-sample](https://github.com/TechNexion-Vision/vizionsdk-c/tree/main/samples) | Windows / Linux |
+| **Python** | [Install VizionSDK-Python](https://developer.technexion.com/docs/vision-software/vizionsdk/python/pyvizionsdk-installation) | [pyvizionsdk-samples](https://github.com/TechNexion-Vision/vizionsdk-python/tree/main/samples) | Windows / Linux |
+| **C#** | [Install VizionSDK-C#](https://developer.technexion.com/docs/vision-software/vizionsdk/csharp/csvizionsdk-installation) | [vizionsdk-csharp-samples](https://github.com/TechNexion-Vision/vizionsdk-csharp/tree/main/samples) | Windows only |
+
+
+## Documentation
+#### Developer Guides
+- [VizionSDK Overview](https://developer.technexion.com/docs/vision-software/vizionsdk/)
+- [VizionSDK API User Guide](https://developer.technexion.com/docs/category/recommended-api-v25041)
+
+#### Integration Samples
+- [vizionsdk-opencv](https://github.com/TechNexion-Vision/vizionsdk-opencv) – Example project showing how to integrate VizionSDK with OpenCV.
+
 
 ## vizion-ctl
 
