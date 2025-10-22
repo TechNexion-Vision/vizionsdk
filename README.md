@@ -7,15 +7,11 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 
 ## Supported Platforms
 
-#### [Windows x64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#windows-x64)
-- Windows 10 and 11 (64-bit)
-#### [Linux x64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#linux-x64)
-- Ubuntu Desktop 20.04 and 22.04 (64-bit)
-- UP Squared Pro 7000
-#### [Linux ARM64](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation#linux-arm64)
-- NVIDIA Jetson (JetPack 6 or later)
-- NXP-i.MX8MM, NXP-i.MX8MQ, NXP-i.MX8MP, NXP-i.MX93, NXP-i.MX95
-- TI-TDA4VM
+| Platform | Architecture | Supported Versions |
+|-----------|---------------|--------------------|
+| **Windows x64** | AMD64 | Windows 10 / 11 |
+| **Linux x64** | AMD64 | Ubuntu 20.04 / 22.04, UP Squared Pro 7000 |
+| **Linux ARM64** | ARM64 | NVIDIA Jetson (JetPack 6+)<br>NXP i.MX8MM / i.MX8MQ / i.MX8MP / i.MX93 / i.MX95<br>TI TDA4VM |
 
 ## Supported TechNexion Cameras
 
@@ -51,7 +47,7 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 
 ## vizion-ctl
 
-[vizion-ctl](https://developer.technexion.com/docs/vision-software/vizionsdk/vizion-ctl/vizionctl-overview) is a cross-platform command-line tool for controlling TechNexion cameras.
+**vizion-ctl** is a cross-platform command-line tool for controlling TechNexion cameras.
 
 It supports camera parameter control, information retrieval, and firmware updates via terminal commands.
 
