@@ -27,11 +27,10 @@ Standard runtime libraries (e.g., `glibc`, `libstdc++`, `pthread`) are excluded.
 
 - **pugixml** — [MIT License](https://github.com/zeux/pugixml/blob/master/LICENSE.md)  
 
-- **argparse** — [MIT License](https://github.com/p-ranav/argparse/blob/master/LICENSE)  
 
 ---
 
-### System Libraries
+### Linux-Specific Dependencies
 
 - **GStreamer** — [LGPL 2.1](https://gstreamer.freedesktop.org/documentation/frequently-asked-questions/licensing.html)  
   Components: gstreamer-1.0, gstreamer-base-1.0, gstreamer-app-1.0, gstreamer-allocators-1.0  
@@ -42,6 +41,13 @@ Standard runtime libraries (e.g., `glibc`, `libstdc++`, `pthread`) are excluded.
 
 > **Note:** These libraries are dynamically linked and provided by the Linux distribution.  
 > Standard C/C++ runtimes (glibc, libstdc++) are excluded.
+
+
+---
+
+### Windows-Specific Dependencies
+
+- **Windows Media Foundation** — Proprietary (Microsoft Windows SDK)  
 
 ---
 
@@ -56,12 +62,6 @@ Standard runtime libraries (e.g., `glibc`, `libstdc++`, `pthread`) are excluded.
 
 
 - **numpy (>=1.21.0)** — [BSD License](https://github.com/numpy/numpy)  
-
----
-
-### Windows-Specific Dependencies
-
-- **Windows Media Foundation** — Proprietary (Microsoft Windows SDK)  
 
 ---
 
