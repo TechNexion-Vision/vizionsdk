@@ -44,8 +44,9 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 #### Integration Samples
 - [vizionsdk-opencv](https://github.com/TechNexion-Vision/vizionsdk-opencv) – Example project showing how to integrate VizionSDK with OpenCV.
 
+## Built on VizionSDK
 
-## vizion-ctl
+### vizion-ctl
 
 **vizion-ctl** is a cross-platform command-line tool for controlling TechNexion cameras.
 
@@ -56,7 +57,7 @@ Two versions are available:
 - **[pyvizion-ctl](https://developer.technexion.com/docs/vision-software/vizionsdk/vizion-ctl/pyvizion-ctl)** – uses the Python `pyvizionsdk`
 ##### (Note: pyvizion-ctl currently does not support firmware updates.)
 
-## VizionViewer™
+### VizionViewer™
 
 [VizionViewer™](https://developer.technexion.com/docs/vision-software/vizionviewer/) is a cross-platform camera software for video streaming and image capturing from camera devices with user-friendly Graphical User Interface based on the **VizionSDK**.
 
