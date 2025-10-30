@@ -33,7 +33,7 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 | **C++** | [Install VizionSDK-C++](https://developer.technexion.com/docs/vision-software/vizionsdk/cplusplus/vizionsdk-cpp-installation) | [samples (C++)](https://github.com/TechNexion-Vision/vizionsdk/tree/main/samples) | Windows / Linux |
 | **C** | [Install VizionSDK-C](https://developer.technexion.com/docs/vision-software/vizionsdk/c/vizionsdk-c-installation) | [vizionsdk-c-sample](https://github.com/TechNexion-Vision/vizionsdk-c/tree/main/samples) | Windows / Linux |
 | **Python** | [Install VizionSDK-Python](https://developer.technexion.com/docs/vision-software/vizionsdk/python/pyvizionsdk-installation) | [pyvizionsdk-samples](https://github.com/TechNexion-Vision/vizionsdk-python/tree/main/samples) | Windows / Linux |
-| **C#** | [Install VizionSDK-C#](https://developer.technexion.com/docs/vision-software/vizionsdk/csharp/csvizionsdk-installation) | [vizionsdk-csharp-samples](https://github.com/TechNexion-Vision/vizionsdk-csharp/tree/main/samples) | Windows only |
+| **C#** | [Install VizionSDK-C#](https://developer.technexion.com/docs/vision-software/vizionsdk/csharp/csvizionsdk-installation) | [vizionsdk-csharp-samples](https://github.com/TechNexion-Vision/vizionsdk-csharp/tree/main/samples) | Windows / Linux |
 
 
 ## Documentation
