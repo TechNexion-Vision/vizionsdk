@@ -14,7 +14,7 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 |-----------|---------------|--------------------|
 | **Windows x64** | AMD64 | Windows 10 / 11 |
 | **Linux x64** | AMD64 | Ubuntu 20.04 / 22.04, UP Squared Pro 7000 |
-| **Linux ARM64** | ARM64 | NVIDIA Jetson (JetPack 6+)<br>NXP i.MX8MM / i.MX8MQ / i.MX8MP / i.MX93 / i.MX95<br>TI TDA4VM |
+| **Linux ARM64** | ARM64 | NVIDIA Jetson (JetPack 6+)<br>NXP i.MX8MM / i.MX8MQ / i.MX8MP / i.MX93 / i.MX95<br>Raspberry Pi 4 / Raspberry Pi 5<br>TI TDA4VM |
 
 ## Supported TechNexion Cameras
 
