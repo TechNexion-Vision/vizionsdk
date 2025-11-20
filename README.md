@@ -6,7 +6,7 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 - `config/` : Configuration resources for TechNexion camera series, including:
   - **VxConfig**: A configuration file used by VizionSDK to recognize TechNexion camera series.
   - **VxExposure**: A YAML file defining the default minimum and maximum exposure time values for each sensor and resolution.
-  - **RouteConfig**: A folder containing media route YAML file templates.
+  - **route_config**: A folder containing media route YAML file templates.
 
 ## Supported Platforms
 
