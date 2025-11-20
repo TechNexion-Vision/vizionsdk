@@ -1,0 +1,74 @@
+Routes:
+  - device: "crossbar"
+    links: 
+      - {src: "2/0", dst: "5/0", enable: 1}
+      - {src: "2/1", dst: "6/0", enable: 1}
+      - {src: "2/2", dst: "7/0", enable: 1}
+      - {src: "2/3", dst: "8/0", enable: 1}
+      - {src: "3/4", dst: "9/0", enable: 1}
+      - {src: "3/5", dst: "10/0", enable: 1}
+      - {src: "3/6", dst: "11/0", enable: 1}
+      - {src: "3/7", dst: "12/0", enable: 1}
+  - device: "4ac10000.syscon:formatter@20"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+      - {src: "0/1", dst: "1/1", enable: 1}
+      - {src: "0/2", dst: "1/2", enable: 1}
+      - {src: "0/3", dst: "1/3", enable: 1}
+  - device: "csidev-4ad30000.csi"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+      - {src: "0/1", dst: "1/1", enable: 1}
+      - {src: "0/2", dst: "1/2", enable: 1}
+      - {src: "0/3", dst: "1/3", enable: 1}
+  - device: "4ac10000.syscon:formatter@120"
+    links: 
+      - {src: "0/4", dst: "1/4", enable: 1}
+      - {src: "0/5", dst: "1/5", enable: 1}
+      - {src: "0/6", dst: "1/6", enable: 1}
+      - {src: "0/7", dst: "1/7", enable: 1}
+  - device: "csidev-4ad40000.csi"
+    links: 
+      - {src: "0/4", dst: "1/4", enable: 1}
+      - {src: "0/5", dst: "1/5", enable: 1}
+      - {src: "0/6", dst: "1/6", enable: 1}
+      - {src: "0/7", dst: "1/7", enable: 1}
+  - device: "max96724 1-002e"
+    links: 
+      - {src: "0/0", dst: "4/0", enable: 1}
+      - {src: "1/0", dst: "4/1", enable: 1}
+      - {src: "2/0", dst: "4/2", enable: 1}
+      - {src: "3/0", dst: "4/3", enable: 1}
+  - device: "max96724 3-002e"
+    links: 
+      - {src: "0/0", dst: "4/4", enable: 1}
+      - {src: "1/0", dst: "4/5", enable: 1}
+      - {src: "2/0", dst: "4/6", enable: 1}
+      - {src: "3/0", dst: "4/7", enable: 1}
+  - device: "max96717 8-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 9-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 10-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 11-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 12-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 13-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 14-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 15-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+MediaLinks:
+  - {src: "max96724 1-002e:4", dst: "csidev-4ad30000.csi:0", enable: 1}
+  - {src: "max96724 3-002e:4", dst: "csidev-4ad40000.csi:0", enable: 1}

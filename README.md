@@ -2,8 +2,11 @@
 VizionSDK is a cross-platform software development kit (SDK) for Windows and Linux, designed to support TechNexion AR Series Cameras across platforms such as Windows 10/11, Ubuntu, Yocto, NXP i.MX, and NVIDIA Jetson. It enables developers and companies to easily integrate, control, and build custom applications using these cameras.
 
 ## What is included in the repository
-- `samples/` : C++ samples project source code.
-- `config/` : A config file of TechNexion Camera series for VizionSDK to recognize the devices.
+- `samples/` : C++ sample project source code.  
+- `config/` : Configuration resources for TechNexion camera series, including:
+  - **VxConfig**: A configuration file used by VizionSDK to recognize TechNexion camera series.
+  - **VxExposure**: A YAML file defining the default minimum and maximum exposure time values for each sensor and resolution.
+  - **RouteConfig**: A folder containing media route YAML file templates.
 
 ## Supported Platforms
 

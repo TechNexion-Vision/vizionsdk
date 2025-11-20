@@ -1,0 +1,6 @@
+Routes:
+  - device: "crossbar"
+    links: 
+      - {src: "3/0", dst: "5/0", enable: 1}
+MediaLinks:
+  - {src: "tevs 3-0048:0", dst: "csidev-4ad40000.csi:0", enable: 1}

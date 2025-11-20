@@ -1,0 +1,2 @@
+MediaLinks:
+  - {src: "csi2:4", dst: "rp1-cfe-csi2_ch0:0", enable: 1}
