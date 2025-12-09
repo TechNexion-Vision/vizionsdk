@@ -23,16 +23,16 @@ Routes:
       - {src: "1/0", dst: "4/1", enable: 1}
       - {src: "2/0", dst: "4/2", enable: 1}
       - {src: "3/0", dst: "4/3", enable: 1}
-  - device: "max96717 8-0040"
+  - device: "max96717 12-0040"
     links: 
       - {src: "0/0", dst: "1/0", enable: 1}
-  - device: "max96717 9-0040"
+  - device: "max96717 13-0040"
     links: 
       - {src: "0/0", dst: "1/0", enable: 1}
-  - device: "max96717 10-0040"
+  - device: "max96717 14-0040"
     links: 
       - {src: "0/0", dst: "1/0", enable: 1}
-  - device: "max96717 11-0040"
+  - device: "max96717 15-0040"
     links: 
       - {src: "0/0", dst: "1/0", enable: 1}
 MediaLinks:
