@@ -1,0 +1,25 @@
+Routes:
+  - device: "crossbar"
+    links: 
+      - {src: "2/0", dst: "5/0", enable: 1}
+      - {src: "2/1", dst: "6/0", enable: 1}
+  - device: "4ac10000.syscon:formatter@20"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+      - {src: "0/1", dst: "1/1", enable: 1}
+  - device: "csidev-4ad30000.csi"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+      - {src: "0/1", dst: "1/1", enable: 1}
+  - device: "max96724 1-002e"
+    links: 
+      - {src: "0/0", dst: "4/0", enable: 1}
+      - {src: "1/0", dst: "4/1", enable: 1}
+  - device: "max96717 12-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+  - device: "max96717 13-0040"
+    links: 
+      - {src: "0/0", dst: "1/0", enable: 1}
+MediaLinks:
+  - {src: "max96724 1-002e:4", dst: "csidev-4ad30000.csi:0", enable: 1}
