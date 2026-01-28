@@ -1,6 +1,15 @@
 Routes:
+  - device: "csidev-4ad30000.csi"
+    links:
+      - {src: "0/0", dst: "1/0", enable: 1}
+
+  - device: "4ac10000.syscon:formatter@20"
+    links:
+      - {src: "0/0", dst: "1/0", enable: 1}
+
   - device: "crossbar"
-    links: 
+    links:
       - {src: "2/0", dst: "5/0", enable: 1}
+
 MediaLinks:
   - {src: "tevs 1-0048:0", dst: "csidev-4ad30000.csi:0", enable: 1}
