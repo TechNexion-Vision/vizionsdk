@@ -19,16 +19,14 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 
 ## Supported TechNexion Cameras
 
-| Sensor | MIPI           | FPD-LinkIII      | UVC            | GMSL2            |
-|--------|----------------|------------------|----------------|------------------|
-| AR0144 | ✓ TEVS-AR0144  | ✓ VLS3-AR0144    | ✓ VCI-AR0144   | ✓ VLS-GM2-AR0144 |
-| AR0145 | ✓ TEVS-AR0145  | ✓ VLS3-AR0145    |                | ✓ VLS-GM2-AR0145 |
-| AR0234 | ✓ TEVS-AR0234  | ✓ VLS3-AR0234    | ✓ VCI-AR0234   | ✓ VLS-GM2-AR0234 |
-| AR0521 | ✓ TEVS-AR0521  | ✓ VLS3-AR0521    | ✓ VCI-AR0521   | ✓ VLS-GM2-AR0521 |
-| AR0522 | ✓ TEVS-AR0522  | ✓ VLS3-AR0522    | ✓ VCI-AR0522   | ✓ VLS-GM2-AR0522 |
-| AR0821 | ✓ TEVS-AR0821  | ✓ VLS3-AR0821    | ✓ VCI-AR0821   | ✓ VLS-GM2-AR0821 |
-| AR0822 | ✓ TEVS-AR0822  | ✓ VLS3-AR0822    | ✓ VCI-AR0822   | ✓ VLS-GM2-AR0822 |
-| AR1335 | ✓ TEVS-AR1335  | ✓ VLS3-AR1335    | ✓ VCI-AR1335   | ✓ VLS-GM2-AR1335 |
+| Interface | Camera Series |
+|-----------|---------------|
+| MIPI CSI-2 | TEVS, TEVM |
+| FPD-Link III | VLS-FPD3, VLM-FPD3 |
+| GMSL2 | VLS-GM2, VLM-GM2 |
+| UVC | VCI, VCS, UVC-VLS-FPD3, UVC-VLM-FPD3, UVC-VLS-GM2, UVC-VLM-GM2 |
+
+Supported AR sensors for TEVS-based series: AR0144, AR0145, AR0234, AR0235, AR0246, AR0521, AR0522, AR0544, AR0821, AR0822, AR0830, AR1335, AR2020.
 
 ## Supported Languages & Wrappers
 
