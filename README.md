@@ -24,9 +24,9 @@ VizionSDK is a cross-platform software development kit (SDK) for Windows and Lin
 | MIPI CSI-2 | TEVS, TEVM |
 | FPD-Link III | VLS-FPD3, VLM-FPD3 |
 | GMSL2 | VLS-GM2, VLM-GM2 |
-| UVC | VCI, VCS, UVC-VLS-FPD3, UVC-VLM-FPD3, UVC-VLS-GM2, UVC-VLM-GM2 |
+| UVC | VCI, VCS, VCM, UVC-VLS-FPD3, UVC-VLM-FPD3, UVC-VLS-GM2, UVC-VLM-GM2 |
 
-Supported AR sensors for TEVS-based series: AR0144, AR0145, AR0234, AR0235, AR0246, AR0521, AR0522, AR0544, AR0821, AR0822, AR0830, AR1335, AR2020.
+Supported AR sensors for TEVS/TEVM-based series: AR0144, AR0145, AR0234, AR0235, AR0246, AR0521, AR0522, AR0544, AR0821, AR0822, AR0830, AR1335, AR2020.
 
 ## Supported Languages & Wrappers
 
